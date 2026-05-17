@@ -6,17 +6,17 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.6</title>
-      <pubDate>일, 17  5월 2026 19:52:16 +0900</pubDate>
-      <sparkle:version>10</sparkle:version>
-      <sparkle:shortVersionString>0.4.6</sparkle:shortVersionString>
+      <title>0.4.7</title>
+      <pubDate>일, 17  5월 2026 20:05:02 +0900</pubDate>
+      <sparkle:version>11</sparkle:version>
+      <sparkle:shortVersionString>0.4.7</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>In-app Discussions and bug-report links now point to the public repo.</li>
+          <li>Fix a crash when restarting a session (clock-out then clock-in) with the gaze camera on.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.6.zip" sparkle:edSignature="UNEtWkKGxsRF20cXyYfG7g50YynFfX9/su8/1HpeqYgvec20zUB1hPO7Wlq/E10waqAxv7tgEbKPlaAxXyIXAw==" length="2968282" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.7.zip" sparkle:edSignature="LGBLZXzGVommz6tYWkRpBpFz0n7KtuhvjRo+FWdrIn3sSD8Sep07cNI/SCyvNbQqWH5vgC4NPlf08qaxG00wAw==" length="2968953" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

@@ -115,10 +115,10 @@ brew install --cask talkmode
 
 ### Direkter Download
 
-[Neueste Version](https://talkmode.baryon.ai/download/TalkMode-0.4.2.zip) → entpacken → in `Applications` ziehen → beim ersten Start sagt macOS möglicherweise „von einem nicht identifizierten Entwickler", Rechtsklick → einmal Öffnen.
+[Neueste Version](https://talkmode.baryon.ai/download/TalkMode-0.4.3.zip) → entpacken → in `Applications` ziehen → beim ersten Start sagt macOS möglicherweise „von einem nicht identifizierten Entwickler", Rechtsklick → einmal Öffnen.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.2.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.3.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

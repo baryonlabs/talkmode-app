@@ -1,0 +1,41 @@
+name: Feature request / idea
+description: Suggest an improvement, or propose helping with the website, translations, mcp/ or subtools/
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome — and opening one is the easiest way to become a
+        contributor. If you'd like to build it yourself, say so below.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+      description: Describe the feature or improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: What problem does it solve, or who does it help?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area?
+      options:
+        - macOS app
+        - Website (web/)
+        - Translations (READMEs/)
+        - MCP server (mcp/)
+        - Subtools (subtools/)
+        - Not sure / other
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contributing
+      options:
+        - label: I'd like to help build this — please tag me

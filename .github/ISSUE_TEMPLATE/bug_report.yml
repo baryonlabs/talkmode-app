@@ -1,0 +1,41 @@
+name: Bug report
+description: Something in TalkMode or this repo isn't working
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug — the more detail you give, the
+        faster it can be fixed. Already a fix in mind? Mention it; that's a contribution.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: Steps to reproduce, and what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: TalkMode version
+      placeholder: e.g. 0.4.2 (see TalkMode → Settings → About)
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: e.g. macOS 26.1, Apple silicon
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: >-
+        Optional. In the app, use Diagnostics → "Send diagnostic log", or drag in
+        a screenshot. Diagnostic logs never contain your speech or message text.

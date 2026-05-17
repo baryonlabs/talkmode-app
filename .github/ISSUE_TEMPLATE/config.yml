@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions, ideas & help — Discussions
+    url: https://github.com/baryonlabs/talkmode-app/discussions
+    about: For open-ended questions and conversation, use Discussions instead of an issue.
+  - name: Download TalkMode
+    url: https://talkmode.baryon.ai
+    about: Get the latest signed macOS build and read the docs.

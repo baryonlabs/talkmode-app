@@ -4,6 +4,12 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.10 — 2026-05-18
+
+### Added
+- Camera vision: ask the assistant to describe what the camera sees and
+  it captures a still frame and describes it.
+
 ## 0.4.9 — 2026-05-17
 
 ### Fixed

@@ -115,10 +115,10 @@ brew install --cask talkmode
 
 ### सीधा डाउनलोड
 
-[नवीनतम रिलीज़](https://talkmode.baryon.ai/download/TalkMode-0.4.9.zip) → अनज़िप करें → `Applications` में खींचें → पहले लॉन्च पर macOS कह सकता है "अज्ञात डेवलपर से", राइट-क्लिक करें → एक बार Open करें।
+[नवीनतम रिलीज़](https://talkmode.baryon.ai/download/TalkMode-0.4.10.zip) → अनज़िप करें → `Applications` में खींचें → पहले लॉन्च पर macOS कह सकता है "अज्ञात डेवलपर से", राइट-क्लिक करें → एक बार Open करें।
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.9.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.10.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

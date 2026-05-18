@@ -4,6 +4,12 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.11 — 2026-05-18
+
+### Changed
+- Gaze tracking now runs through a debounced state machine, so a brief
+  glance away no longer ends your turn early.
+
 ## 0.4.10 — 2026-05-18
 
 ### Added

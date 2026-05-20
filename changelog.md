@@ -4,6 +4,13 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.12 — 2026-05-20
+
+### Fixed
+- Tool calls (notably "describe what the camera sees") leaked raw JSON
+  into the chat bubble when the assistant prepended a sentence before
+  the tool call; the skill now fires reliably.
+
 ## 0.4.11 — 2026-05-18
 
 ### Changed

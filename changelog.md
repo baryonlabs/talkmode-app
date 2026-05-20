@@ -4,6 +4,17 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.13 — 2026-05-20
+
+### Fixed
+- Meeting Minutes no longer pegs the CPU — the speaker classifier FFT
+  runs on a dedicated background queue.
+- Minutes transcript view stops re-rendering on every STT chunk
+  (MinutesStore isolation).
+- Tool calls (camera vision, calendar, mail, …) no longer get blocked by
+  the model's "I need permission" / "I cannot do this in this
+  environment" responses — the tool manifest now overrides that instinct.
+
 ## 0.4.12 — 2026-05-20
 
 ### Fixed

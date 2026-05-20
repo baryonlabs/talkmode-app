@@ -6,17 +6,19 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.12</title>
-      <pubDate>수, 20  5월 2026 13:48:40 +0900</pubDate>
-      <sparkle:version>16</sparkle:version>
-      <sparkle:shortVersionString>0.4.12</sparkle:shortVersionString>
+      <title>0.4.13</title>
+      <pubDate>수, 20  5월 2026 21:39:33 +0900</pubDate>
+      <sparkle:version>17</sparkle:version>
+      <sparkle:shortVersionString>0.4.13</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>Fix camera-vision and other tool calls leaking raw JSON when the assistant added a preamble before the tool call.</li>
+          <li>Meeting-Minutes mode no longer pegs the CPU — speaker FFT runs off the main thread.</li>
+          <li>Minutes transcript view is faster — it no longer re-renders on every STT chunk.</li>
+          <li>Camera-vision and other tool calls now ignore the model's "Claude Code permission" refusals.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.12.zip" sparkle:edSignature="2TWLVt8Bdm9fvszPNahsxmJTdvgxeUNBPtuN5rg2//hvOsnICNEsHWms5JONfLrDUA9cB1KVbGJsJ9dhSr0BAA==" length="2988661" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip" sparkle:edSignature="txAiKFo/Qj5/b2kOYmj4oImrrII9n1RMhP8uVyZfsxDjALJ8i+hW5+N34pSAGoBqE+bh04Ub/4FTxP1laSAUAw==" length="2992740" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

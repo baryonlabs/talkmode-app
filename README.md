@@ -1,4 +1,4 @@
-# TalkMode
+# OpenTalkMode
 
 Public community home for **TalkMode** — a real-time Korean voice assistant for macOS.
 

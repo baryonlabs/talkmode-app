@@ -4,6 +4,20 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.15 — 2026-05-22
+
+### Fixed
+- Hosted Baryon backend was regressing to English replies for non-Korean
+  / non-English locales. System prompt now resolves the BCP-47 locale to
+  the user-facing language name (35 locales covered + `Locale` fallback)
+  so a Japanese / Spanish / Vietnamese user always gets answers in their
+  language.
+
+### Changed
+- System prompt also asks for voice-friendly responses (1–3 sentences,
+  no markdown / lists / code blocks) so qwen3-coder stops returning
+  fenced code blocks that TTS has to strip.
+
 ## 0.4.14 — 2026-05-22
 
 ### Added

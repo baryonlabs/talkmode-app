@@ -6,18 +6,18 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.14</title>
-      <pubDate>금, 22  5월 2026 12:10:58 +0900</pubDate>
-      <sparkle:version>18</sparkle:version>
-      <sparkle:shortVersionString>0.4.14</sparkle:shortVersionString>
+      <title>0.4.15</title>
+      <pubDate>금, 22  5월 2026 21:12:09 +0900</pubDate>
+      <sparkle:version>19</sparkle:version>
+      <sparkle:shortVersionString>0.4.15</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>First-time users: TalkMode now runs immediately with no setup — free 30 calls per device against Baryon AI's hosted LLM.</li>
-          <li>Install docs now cover the macOS 15+ Gatekeeper unblock (System Settings → Privacy & Security → "Open Anyway") and the Homebrew prerequisite step.</li>
+          <li>The hosted backend now always replies in the user's language — Japanese / Spanish / Vietnamese / Hindi etc. were regressing to English before.</li>
+          <li>System prompt also asks for short voice-friendly answers (1–3 sentences, no markdown), so the TTS reads cleaner.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip" sparkle:edSignature="exhWJ77BCaT6TXiwNEMK6WSlIM58a61dIq7nHHAx08w+6rkE1r3em3pFt8YSw/CAMJ7L91f3Oy1ko9t0hKQzDA==" length="3006405" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.15.zip" sparkle:edSignature="gJMh8HbxY8kcJNiyGLBXvmZEeC/DGsE3Wb9ApGfQQ2z1rlmI7spe4jTdmWcFoNHIKBT5rEUgB57XHdHzuPFVCg==" length="3007593" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

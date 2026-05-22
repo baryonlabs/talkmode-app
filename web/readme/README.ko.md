@@ -107,8 +107,6 @@ Mac의 Speech 프레임워크가 지원하는 모든 언어 — macOS Sonoma+에
 
 설치는 세 단계입니다. 처음이라면 모두 거쳐야 합니다.
 
-> 🖼 **스크린샷으로 따라하기**: [/install.html](https://talkmode.baryon.ai/install.html) — Sequoia (15) / Tahoe (26) 의 "확인되지 않은 개발자" 차단 풀기까지 단계별 화면 안내.
-
 ### 1단계 — Homebrew 설치 (한 번만)
 
 Homebrew는 macOS용 패키지 관리자입니다. 터미널(Spotlight에서 "터미널" 검색)에서 `brew --version` 을 입력했을 때 버전이 나오면 이미 설치된 상태이니 2단계로 건너뛰세요.
@@ -146,10 +144,10 @@ TalkMode는 ad-hoc 코드 서명 상태(개발자 인증서 미사용)라서, ma
 
 ### 직접 다운로드 (Homebrew 없이)
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.15.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.15.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

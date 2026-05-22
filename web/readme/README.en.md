@@ -108,8 +108,6 @@ Speech *output* uses `AVSpeechSynthesizer` — same engine as macOS Siri / dicta
 
 Three steps. First-timers need all three.
 
-> 🖼 **Visual walkthrough**: [/install.html](https://talkmode.baryon.ai/install.html) — step-by-step screenshots for clearing the macOS 15+ Gatekeeper block.
-
 ### Step 1 — Install Homebrew (once)
 
 Homebrew is the macOS package manager. In Terminal (Spotlight → "Terminal"), run `brew --version`. If you see a version, skip to Step 2.
@@ -147,10 +145,10 @@ TalkMode is ad-hoc signed (no paid developer certificate), so on **macOS Sequoia
 
 ### Direct download (without Homebrew)
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.15.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.15.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

@@ -108,6 +108,8 @@ Speech *output* uses `AVSpeechSynthesizer` — same engine as macOS Siri / dicta
 
 Three steps. First-timers need all three.
 
+> 🖼 **Visual walkthrough**: [/install.html](https://talkmode.baryon.ai/install.html) — step-by-step screenshots for clearing the macOS 15+ Gatekeeper block.
+
 ### Step 1 — Install Homebrew (once)
 
 Homebrew is the macOS package manager. In Terminal (Spotlight → "Terminal"), run `brew --version`. If you see a version, skip to Step 2.

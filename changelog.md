@@ -4,6 +4,18 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.14 — 2026-05-22
+
+### Added
+- Hosted Baryon AI default backend: first-time users get 30 free calls per
+  device with no Claude CLI / Codex CLI / OpenAI setup needed. Switch in
+  `Settings → LLM provider` after the quota.
+
+### Docs
+- Install guide now walks Homebrew prereq + macOS 15+ Gatekeeper
+  "Open Anyway" steps — clears the "확인되지 않은 개발자" block first-time
+  users were getting stuck on.
+
 ## 0.4.13 — 2026-05-20
 
 ### Fixed

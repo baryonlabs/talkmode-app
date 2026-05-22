@@ -145,10 +145,10 @@ TalkMode is ad-hoc signed (no paid developer certificate), so on **macOS Sequoia
 
 ### Direct download (without Homebrew)
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 
@@ -160,7 +160,7 @@ Sparkle 2 is built in. Once the first-launch block is cleared, background update
 
 - macOS **Sonoma (14.0)** or later — Sonoma / Sequoia (15) / Tahoe (26) all verified
 - Apple silicon (M1 / M2 / M3 / M4)
-- An LLM provider — at minimum the Claude CLI, Codex CLI, or an OpenAI key
+- LLM provider — **defaults to Baryon AI hosted (no setup · free 30 calls)**. After 30 calls, switch in `Settings → LLM provider` to Claude CLI, Codex CLI, or an OpenAI key.
 
 ---
 

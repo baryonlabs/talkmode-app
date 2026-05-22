@@ -115,10 +115,10 @@ brew install --cask talkmode
 
 ### Doğrudan indirme
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → zip'i açın → `Applications` klasörüne sürükleyin → ilk açılışta macOS "from unknown developer" diyebilir, bir kez sağ tıklayın → Open.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip) → zip'i açın → `Applications` klasörüne sürükleyin → ilk açılışta macOS "from unknown developer" diyebilir, bir kez sağ tıklayın → Open.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.14.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

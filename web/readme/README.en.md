@@ -106,16 +106,46 @@ Speech *output* uses `AVSpeechSynthesizer` — same engine as macOS Siri / dicta
 
 ## Install
 
-### Homebrew (recommended)
+Three steps. First-timers need all three.
+
+### Step 1 — Install Homebrew (once)
+
+Homebrew is the macOS package manager. In Terminal (Spotlight → "Terminal"), run `brew --version`. If you see a version, skip to Step 2.
+
+Otherwise:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+You'll be prompted for your Mac login password and to agree to install Command Line Tools (5–15 min). Once it finishes, close and reopen Terminal.
+
+> Details on the [official Homebrew site](https://brew.sh).
+
+### Step 2 — Install TalkMode
 
 ```bash
 brew tap baryonlabs/talkmode
 brew install --cask talkmode
 ```
 
-### Direct download
+`TalkMode.app` lands in `Applications`. Launch via Launchpad or Spotlight.
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → unzip → drag into `Applications` → first launch macOS may say "from unknown developer", right-click → Open once.
+### Step 3 — Clear the "unidentified developer" warning on first launch
+
+TalkMode is ad-hoc signed (no paid developer certificate), so on **macOS Sequoia (15)** and **Tahoe (26)** the first launch is blocked. **This is normal and only needs to be cleared once.**
+
+1. Double-click TalkMode → "cannot be opened because it is from an unidentified developer" → click **Done**
+2. Open **System Settings → Privacy & Security**
+3. Scroll down to the **Security** section → find "TalkMode was blocked" → click **Open Anyway**
+4. Confirm in the dialog **"Are you sure you want to open this app?"** → **Open**
+5. From here on, normal launches work. You won't need System Settings again.
+
+> On macOS 15+ the old "right-click → Open" trick no longer works. Step 3 above is required.
+
+### Direct download (without Homebrew)
+
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
 
 ```bash
 curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip -o TalkMode.zip
@@ -124,11 +154,11 @@ unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 
 ### Auto-update
 
-Sparkle 2 is built in. Once installed (either way), TalkMode checks for updates in the background — open `TalkMode → Check for Updates…` or `Settings → Update` to control it.
+Sparkle 2 is built in. Once the first-launch block is cleared, background updates aren't re-blocked — control them in `TalkMode → Check for Updates…` or `Settings → Update`.
 
 ### Requirements
 
-- macOS **Sonoma (14.0)** or later
+- macOS **Sonoma (14.0)** or later — Sonoma / Sequoia (15) / Tahoe (26) all verified
 - Apple silicon (M1 / M2 / M3 / M4)
 - An LLM provider — at minimum the Claude CLI, Codex CLI, or an OpenAI key
 

@@ -105,16 +105,46 @@ Mac의 Speech 프레임워크가 지원하는 모든 언어 — macOS Sonoma+에
 
 ## 설치
 
-### Homebrew (권장)
+설치는 세 단계입니다. 처음이라면 모두 거쳐야 합니다.
+
+### 1단계 — Homebrew 설치 (한 번만)
+
+Homebrew는 macOS용 패키지 관리자입니다. 터미널(Spotlight에서 "터미널" 검색)에서 `brew --version` 을 입력했을 때 버전이 나오면 이미 설치된 상태이니 2단계로 건너뛰세요.
+
+처음이라면 터미널에서:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+설치 중 Mac 로그인 비밀번호와 Command Line Tools 동의 화면이 뜹니다. 안내대로 진행하세요(보통 5–15분 소요). 끝나면 터미널을 한 번 닫았다 다시 엽니다.
+
+> 자세한 한국어 가이드는 [Homebrew 공식 사이트](https://brew.sh/index_ko) 또는 [블로그 가이드](https://velog.io/@nancy_yeonjeong/맥북Mac-터미널-Brew-설치)를 참고하세요.
+
+### 2단계 — TalkMode 설치
 
 ```bash
 brew tap baryonlabs/talkmode
 brew install --cask talkmode
 ```
 
-### 직접 다운로드
+`Applications` 폴더에 `TalkMode.app` 가 생깁니다. Launchpad나 Spotlight에서 "TalkMode" 검색으로 실행하세요.
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → 압축 해제 → `Applications`로 드래그 → 첫 실행 시 macOS가 "확인되지 않은 개발자"라고 할 수 있으니 우클릭 → 한 번 열기.
+### 3단계 — 첫 실행 시 "확인되지 않은 개발자" 경고 풀기
+
+TalkMode는 ad-hoc 코드 서명 상태(개발자 인증서 미사용)라서, macOS **Sequoia (15)** 와 **Tahoe (26)** 에서는 첫 실행이 차단됩니다. **정상이며 한 번만 풀어두면 됩니다.**
+
+1. TalkMode 더블클릭 → "확인되지 않은 개발자라 열 수 없습니다" 경고 → **"완료"** 클릭
+2. **시스템 설정** 열기 → **개인정보 보호 및 보안**
+3. 아래로 스크롤 → **보안** 섹션에 "TalkMode가 차단되었습니다" 항목 → **"그래도 열기"** (또는 "무시하고 열기") 클릭
+4. 확인 대화상자에서 **"위험이 있어도 이 앱을 실행하시겠습니까?"** → **"열기"**
+5. 이후로는 정상 실행됩니다. 시스템 설정에 다시 갈 필요 없음.
+
+> macOS 15 (Sequoia) 부터는 Finder에서 우클릭 → 열기 방법으로는 풀리지 않습니다. 위 3단계가 필수입니다.
+
+### 직접 다운로드 (Homebrew 없이)
+
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
 
 ```bash
 curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.13.zip -o TalkMode.zip
@@ -123,11 +153,11 @@ unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 
 ### 자동 업데이트
 
-Sparkle 2가 내장되어 있습니다. 설치 후(어느 방법으로든) TalkMode는 백그라운드에서 업데이트를 확인합니다 — `TalkMode → 업데이트 확인…` 또는 `설정 → 업데이트`에서 제어하세요.
+Sparkle 2가 내장되어 있습니다. 첫 실행 차단을 한 번 푼 뒤에는 백그라운드 업데이트가 다시 차단되지 않습니다 — `TalkMode → 업데이트 확인…` 또는 `설정 → 업데이트`에서 제어하세요.
 
 ### 요구 사항
 
-- macOS **Sonoma (14.0)** 이상
+- macOS **Sonoma (14.0)** 이상 — Sonoma / Sequoia (15) / Tahoe (26) 모두 동작 확인
 - Apple silicon (M1 / M2 / M3 / M4)
 - LLM 제공자 — 최소한 Claude CLI, Codex CLI 또는 OpenAI 키
 

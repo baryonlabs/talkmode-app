@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TalkMode 가입 완료 — 이메일을 확인해주세요</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+  body { margin: 0; background: #0b0d12; color: #e6e9ef; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif; -webkit-font-smoothing: antialiased; }
+  .card { max-width: 560px; margin: 80px auto; padding: 48px 36px; background: #11141b; border: 1px solid #232838; border-radius: 16px; text-align: center; }
+  .badge { font-size: 3.6em; line-height: 1; margin-bottom: 16px; }
+  h1 { font-size: 1.8em; margin: 0 0 12px; }
+  p { color: #9aa3b2; margin: 12px 0; }
+  .key-box { margin: 24px 0; padding: 18px; background: #0a0c11; border: 1px solid #232838; border-radius: 10px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; color: #4ade80; word-break: break-all; user-select: all; }
+  .key-box.hidden { display: none; }
+  .steps { text-align: left; background: #161a23; border: 1px solid #232838; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+  .steps h3 { margin: 0 0 12px; font-size: 1em; color: #e6e9ef; }
+  .steps ol { margin: 0; padding-left: 20px; color: #c0c8d8; }
+  .steps li { margin: 8px 0; font-size: 0.94em; }
+  .steps code { background: #0a0c11; padding: 2px 6px; border-radius: 4px; font-size: 0.92em; }
+  a.btn { display: inline-block; margin-top: 16px; padding: 12px 24px; background: linear-gradient(135deg, #4c71f2, #7e3ad6); color: #fff; border-radius: 10px; text-decoration: none; font-weight: 600; }
+  .small { color: #9aa3b2; font-size: 0.85em; margin-top: 28px; }
+  .small a { color: #9aa3b2; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">📬</div>
+  <h1>가입 완료</h1>
+  <p>이메일로 <strong>평생 라이선스 키</strong>를 보냈습니다. 1~2분 안에 도착하지 않으면 스팸 폴더를 확인해주세요.</p>
+
+  <div id="keyBox" class="key-box hidden"></div>
+
+  <div class="steps">
+    <h3>다음 단계 — TalkMode 에 키 등록</h3>
+    <ol>
+      <li>이메일에서 라이선스 키 복사</li>
+      <li>TalkMode 실행 → <code>설정 → 라이선스</code></li>
+      <li>키 붙여넣기 → <strong>활성화</strong></li>
+      <li>이후 모든 호출이 무제한 (베타 기간)</li>
+    </ol>
+  </div>
+
+  <a class="btn" href="/">홈으로</a>
+
+  <p class="small">메일이 도착하지 않으면 <a href="mailto:ai.baryon.ai@gmail.com">ai.baryon.ai@gmail.com</a> 으로 문의해주세요.</p>
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const key = params.get('key');
+  if (key) {
+    const box = document.getElementById('keyBox');
+    box.textContent = key;
+    box.classList.remove('hidden');
+  }
+</script>
+</body>
+</html>

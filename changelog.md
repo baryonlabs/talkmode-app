@@ -4,6 +4,17 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.16 — 2026-05-24
+
+### Fixed
+- 퇴근(stop) / mode switch 시 main thread freeze 수정 — AudioRecorder.close()가
+  writeQueue.sync로 디스크 finalize를 main에서 기다리던 패턴을 비동기 dispatch로
+  교체. Minutes 모드를 길게 한 뒤일수록 freeze가 길었음.
+
+### Changed
+- Voice picker가 Premium / Enhanced / Standard SwiftUI Section으로 그룹화.
+  Premium 음성이 맨 위에 모여 식별 쉬워짐.
+
 ## 0.4.15 — 2026-05-22
 
 ### Fixed

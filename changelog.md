@@ -4,6 +4,15 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.20 — 2026-05-24
+
+### Added
+- 통역 모드 (Translate). 사용자가 언어 A 로 말하면 TalkMode 가 언어 B 로
+  말함. 설정 → 언어 에서 source / target locale 선택. STT/TTS locale 이
+  effectiveSTTLocale / effectiveTTSLocale computed property 로 분기.
+  Translate 모드일 때 PersonaStore.systemPrompt 가 persona/skill/nemotron
+  overlay 전부 단락하고 순수 인터프리터 prompt 만 출력.
+
 ## 0.4.19 — 2026-05-24
 
 ### Added

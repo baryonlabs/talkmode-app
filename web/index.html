@@ -163,6 +163,13 @@
   .ph-banner__txt strong { font-weight: 700; }
   .ph-banner__cta { background: rgba(255,255,255,0.18); padding: 4px 12px; border-radius: 999px; font-weight: 600; white-space: nowrap; }
   @media (max-width: 600px) { .ph-banner { font-size: 0.85em; padding: 8px 12px; } .ph-banner__txt { font-size: 0.95em; } }
+
+  /* Values strip just above footer */
+  .values-strip { background: linear-gradient(135deg, #0f1b3a, #1a0f3a); padding: 36px 24px; text-align: center; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .values-inner { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 800px; color: #e6e9ef; font-size: 1.05em; line-height: 1.6; }
+  .values-inner .value { font-weight: 500; }
+  .values-inner .value strong { font-weight: 700; background: linear-gradient(135deg, #4c71f2, #7e3ad6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .values-inner .dot { color: var(--muted); opacity: 0.5; }
 </style>
 <!-- PostHog product analytics -->
 <script>
@@ -336,6 +343,18 @@ open 'x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension'</p
   </div>
 </section>
 
+<section class="values-strip">
+  <div class="values-inner">
+    <span class="value"><strong>Free for work.</strong></span>
+    <span class="dot">·</span>
+    <span class="value">No ads.</span>
+    <span class="dot">·</span>
+    <span class="value">No tracking.</span>
+    <span class="dot">·</span>
+    <span class="value">Your files, your control.</span>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="foot">
@@ -345,7 +364,7 @@ open 'x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension'</p
       <a href="https://github.com/baryonlabs/talkmode-app/issues">Issues</a>
       <a href="https://www.gnu.org/licenses/agpl-3.0.html">License (AGPL-3.0)</a>
       <a href="mailto:support@baryon.ai">support@baryon.ai</a>
-      <span class="made">Made in Seoul by <a href="https://baryon.ai">Baryon Labs</a>. TalkMode is free software under the GNU AGPL-3.0.</span>
+      <span class="made">Made in Seoul by <a href="https://baryon.ai">Baryon Labs</a>. TalkMode is free software.</span>
     </div>
   </div>
 </footer>

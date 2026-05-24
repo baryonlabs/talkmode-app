@@ -6,17 +6,18 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.18</title>
-      <pubDate>일, 24  5월 2026 13:38:18 +0900</pubDate>
-      <sparkle:version>22</sparkle:version>
-      <sparkle:shortVersionString>0.4.18</sparkle:shortVersionString>
+      <title>0.4.19</title>
+      <pubDate>일, 24  5월 2026 17:35:58 +0900</pubDate>
+      <sparkle:version>23</sparkle:version>
+      <sparkle:shortVersionString>0.4.19</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>LLM 요청 실패 직후 퇴근→출근 빠르게 누르면 앱이 응답없음 되던 freeze 수정 — 두 audio engine 가 동시에 마이크를 잡으려다 hang 됐던 race를 직렬화.</li>
+          <li>로컬 LLM 지원 — LM Studio 와 Ollama 가 신규 provider로 추가. 완전 오프라인 음성 비서 가능.</li>
+          <li>설정 → 어시스턴트 에서 둘 중 하나 선택 + base URL / model 자유 변경.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.18.zip" sparkle:edSignature="Up9eV+YCKSCk58kPX+2fxkZ99a5t8MUe+sVT6wTPN1R1bqOv96AFOdUPQ0X2X1b9jWbdqa5rKdKpZPr2lsUSDg==" length="3016464" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.19.zip" sparkle:edSignature="tvxPdQSefWVwooug2g57wFt9AWyoPzeKHBKUYe391ansTTGTn7lZvG9NW45rBy1hiKaBwnlZwaup1pn6IWnrCg==" length="3039136" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

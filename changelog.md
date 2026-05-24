@@ -4,6 +4,17 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.19 — 2026-05-24
+
+### Added
+- 로컬 LLM 지원: LM Studio (기본 http://localhost:1234) 와 Ollama (기본
+  http://localhost:11434) 가 신규 AssistantProvider 로 추가. 완전 오프라인
+  음성 비서가 가능해짐. 단일 LocalOpenAICompatClient 가 둘 다 처리
+  (OpenAI 호환 /v1/chat/completions). 설정 → 어시스턴트 에서 둘 중 선택
+  + base URL / model 자유 변경.
+- Info.plist 에 NSAllowsLocalNetworking 추가 — http://localhost 호출이
+  ATS 에 막히지 않도록.
+
 ## 0.4.18 — 2026-05-24
 
 ### Fixed

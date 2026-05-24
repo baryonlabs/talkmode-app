@@ -6,17 +6,17 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.20</title>
-      <pubDate>일, 24  5월 2026 17:45:56 +0900</pubDate>
-      <sparkle:version>24</sparkle:version>
-      <sparkle:shortVersionString>0.4.20</sparkle:shortVersionString>
+      <title>0.4.21</title>
+      <pubDate>일, 24  5월 2026 17:59:52 +0900</pubDate>
+      <sparkle:version>25</sparkle:version>
+      <sparkle:shortVersionString>0.4.21</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>새 모드 — 통역 (Translate). 사용자 언어로 말하면 비서가 다른 언어로 말합니다. 설정 → 언어 에서 두 언어 자유 선택.</li>
+          <li>Obsidian vault 자동 동기 — 회의록 / 일반 대화 / Memory 항목 / 통역 transcript 를 Obsidian vault 의 markdown 으로 저장. plugin 불필요.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.20.zip" sparkle:edSignature="bRTaffWHki9vN0mJrddgwJV2j8KWQOEj4URnGwlqTMdw22Ui15JJEhr2/NeXWtpGdpqBswAihyF6HcvZ6ds2Bg==" length="3042189" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.21.zip" sparkle:edSignature="F0E/KQFt/HfjxoKi3sMeOEodeXWJWfUJH1b/iV4FEP0pSo5FEhjj4Do2xveaALLfjWzOGQ9yWmkIi1tkH360BQ==" length="3063525" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

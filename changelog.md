@@ -4,6 +4,13 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.21 — 2026-05-24
+
+### Added
+- Obsidian vault 자동 동기. 설정 → Obsidian 에서 vault 경로 선택 +
+  4 채널(회의록/일반대화/Memory/통역) 토글. {vault}/{subfolder}/ 하위에
+  자동으로 markdown 저장. plugin / CLI 불필요 — direct path write.
+
 ## 0.4.20 — 2026-05-24
 
 ### Added

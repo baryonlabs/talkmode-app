@@ -77,8 +77,20 @@
   gtag('config', 'G-Z1WQBLGEZL');
 </script>
 
+  <link rel="canonical" href="https://talkmode.baryon.ai/readme" />
+  <meta name="description" content="TalkMode 의 설치, 모드, 권한, 페르소나, 스킬, 통역, Obsidian 동기, 로컬 LLM 등 전체 문서 한 곳." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TalkMode 문서" />
+  <meta property="og:description" content="TalkMode 의 설치, 모드, 권한, 스킬, 통역, Obsidian 동기, 로컬 LLM 등 전체 문서." />
+  <meta property="og:image" content="https://talkmode.baryon.ai/screenshots/conversation-main.png" />
+  <meta property="og:url" content="https://talkmode.baryon.ai/readme" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TalkMode 문서" />
+  <meta name="twitter:description" content="TalkMode 의 설치, 모드, 권한, 스킬, 통역, Obsidian 동기, 로컬 LLM 등 전체 문서." />
+  <meta name="twitter:image" content="https://talkmode.baryon.ai/screenshots/conversation-main.png" />
 </head>
 <body>
+  <h1 style="position:absolute;left:-9999px">TalkMode Documentation</h1>
 
 <header>
   <nav class="nav">
@@ -124,7 +136,7 @@
       .replace(/href="\.\.\/README\.md"/g, 'href="?lang=en"')
       .replace(/href="(?:readme\/)?README\.([A-Za-z-]+)\.md"/g, 'href="?lang=$1"')
       .replace(/\[!\[[^\]]*\]\(https:\/\/img\.shields\.io\/github\/[^)]*\)\]\([^)]*\)\n?/g, "")
-      .replace(/<a[^>]*>\s*<img[^>]*img\.shields\.io\/github\/[^>]*>\s*<\/a>/g, "");
+      .replace(/<a[^>]*>\s*<img[^ alt="">]*img\.shields\.io\/github\/[^>]*>\s*<\/a>/g, "");
   }
 
   function load(lang) {

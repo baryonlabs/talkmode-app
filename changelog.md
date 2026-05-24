@@ -4,6 +4,14 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.18 — 2026-05-24
+
+### Fixed
+- LLM 요청 fail → 퇴근 → 출근 빠르게 누르면 앱이 응답없음 되던 freeze 수정.
+  setEnabled() 가 startSession/endSession Task 를 unawaited 로 spawn 해서
+  두 task 가 동시에 AVAudioEngine 을 시작하려다 AVAudioSession 충돌로 hang
+  됐다. 단일 sessionTask 체인으로 직렬화.
+
 ## 0.4.17 — 2026-05-24
 
 ### Fixed

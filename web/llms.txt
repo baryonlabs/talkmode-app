@@ -1,0 +1,38 @@
+# TalkMode
+
+> Real-time Korean (and 35-language) voice assistant for macOS. Sub-second turn-taking with a multimodal (voice + gaze + transcript) endpointer. On-device speaker diarization. Free hosted backend with 30 calls per device, then bring your own Claude / Codex / OpenAI / LM Studio / Ollama / MLX provider. AGPL-3.0.
+
+The macOS app behaves like a coworker, not a chatbot — it knows when to take a turn from voice activity, the language particles in your transcript, and (optionally) where your eyes are looking. Four modes: Conversation, Meeting Minutes (with speaker diarization), Brainstorm, Counseling, plus Translate (real-time interpreter). Optional Obsidian vault sync writes meetings / conversations / memories / translations as Markdown directly into the user's vault.
+
+## Core docs
+
+- [Homepage](https://talkmode.baryon.ai/): Overview, screenshots, install one-liner.
+- [Visual install guide](https://talkmode.baryon.ai/install): Step-by-step screenshots — Homebrew install, TalkMode install, macOS 15+ Gatekeeper unblock.
+- [Full README](https://talkmode.baryon.ai/readme): Modes, permissions, persona, skills, supported languages, privacy policy. 20 UI language translations available via ?lang=XX.
+- [Free lifetime license signup](https://talkmode.baryon.ai/signup): Email + optional 4-question survey + newsletter opt-in → license key for unlimited beta-period usage.
+
+## Source
+
+- [App source (GitHub)](https://github.com/baryonlabs/talkmode): Swift / SwiftPM, AGPL-3.0.
+- [Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip): Notarized Universal binary (planned: Apple Developer ID notarization in progress).
+- [Sparkle appcast](https://talkmode.baryon.ai/appcast.xml): EdDSA-signed automatic updates.
+- [Community / website source](https://github.com/baryonlabs/talkmode-app): This repo. Issues, discussions, translations.
+
+## System requirements
+
+- macOS 14 (Sonoma) or later — Sonoma / Sequoia (15) / Tahoe (26) all verified
+- Apple Silicon (M1 / M2 / M3 / M4)
+- An LLM provider — defaults to the hosted Baryon backend (free, no setup); can switch to Claude CLI, Codex CLI, OpenAI API, NVIDIA NIM, or local LM Studio / Ollama / MLX.
+
+## Privacy
+
+- Voice, transcripts, meeting recordings, and memory entries stay on the user's Mac.
+- The only data that leaves the Mac is the LLM call to the provider the user picked, plus anonymous diagnostic metadata (free text stripped to length values, opt-out in Settings).
+- The marketing website at talkmode.baryon.ai uses anonymous product analytics (PostHog + Google Analytics) — that's a separate thing from the app itself.
+
+## Optional
+
+- [Privacy / security policy (SECURITY.md)](https://github.com/baryonlabs/talkmode/blob/main/SECURITY.md): Exactly what data is handled, where it's stored, and what leaves the device.
+- [Future work backlog (FUTURE_WORK.md)](https://github.com/baryonlabs/talkmode/blob/main/docs/FUTURE_WORK.md): Apple Developer ID notarization, Obsidian advanced integration, Intel CPU support, MCP migration, MAS port.
+- [Intel CPU support analysis](https://github.com/baryonlabs/talkmode/blob/main/docs/INTEL_SUPPORT_REPORT.md): Why Apple Silicon only today and what it would take to support Intel Macs.
+- [Hosted LLM server spec (BARYON_HOSTED_LLM_SPEC.md)](https://github.com/baryonlabs/talkmode/blob/main/docs/BARYON_HOSTED_LLM_SPEC.md): OpenAI-compatible endpoint contract, rate limiting, multilingual response requirements.

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>TalkMode — a real assistant on your Mac</title>
-<meta name="description" content="TalkMode turns a Mac mini or any Apple-silicon Mac into a real-time Korean voice assistant. Sub-second turn-taking, on-device, your terms." />
+<meta name="description" content="TalkMode is a real-time Mac AI voice assistant — sub-second turn-taking, on-device speaker diarization, 35-language translate mode. Free hosted backend or bring your own Claude / OpenAI / LM Studio / Ollama / MLX. Privacy-first, AGPL-3.0." />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <meta property="og:title" content="TalkMode — a real assistant on your Mac" />
 <meta property="og:description" content="Real-time Korean voice assistant for macOS. Multimodal endpointing, on-device, privacy by default." />
@@ -172,6 +172,17 @@
   .values-inner .dot { color: var(--muted); opacity: 0.5; }
 
   .values-note { max-width: 700px; margin: 14px auto 0; font-size: 0.82em; color: var(--muted); line-height: 1.5; }
+
+  /* FAQ */
+  .faq { padding: 64px 24px; background: var(--bg); }
+  .faq h2 { font-size: 2em; margin: 0 0 28px; text-align: center; }
+  .faq details { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 12px auto; max-width: 720px; }
+  .faq summary { cursor: pointer; font-weight: 600; color: var(--fg); list-style: none; font-size: 1.02em; }
+  .faq summary::after { content: "▾"; float: right; color: var(--muted); transition: transform 0.2s; }
+  .faq details[open] summary::after { transform: rotate(180deg); }
+  .faq details p { margin: 14px 0 0; color: var(--muted); line-height: 1.6; font-size: 0.95em; }
+  .faq details p a { color: var(--brand, #4c71f2); }
+  .faq details p code { background: var(--code-bg, #0a0c11); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
 </style>
 <!-- PostHog product analytics -->
 <script>
@@ -217,6 +228,7 @@
   "license": "https://www.gnu.org/licenses/agpl-3.0.html"
 }
 </script>
+  <meta name="keywords" content="Mac AI voice assistant, on-device AI voice Mac, 맥 AI 음성 비서, 실시간 통역 Mac, Apple silicon voice assistant, macOS Korean voice assistant, Ollama Mac voice, LM Studio Mac voice, MLX voice assistant, real-time interpreter Mac, Obsidian voice sync, AGPL voice assistant" />
 </head>
 <body>
 <!-- Product Hunt launch banner — replace href and badge img once an official embed code is in hand -->
@@ -370,6 +382,46 @@ open 'x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension'</p
   </div>
 </section>
 
+
+<section class="faq" id="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Mac 에서 AI 음성 비서를 쓰고 싶은데 어떻게 시작하나요?</summary>
+      <p>Homebrew 가 있으면 <code>brew tap baryonlabs/talkmode &amp;&amp; brew install --cask talkmode</code> 한 줄이면 끝. macOS Sequoia (15) 부터는 첫 실행 시 시스템 설정에서 한 번 허용해야 — <a href="/install">5분 가이드</a> 따라하면 됩니다.</p>
+    </details>
+    <details>
+      <summary>API 키가 없는데도 쓸 수 있나요?</summary>
+      <p>네. 가입 / 키 설정 없이 device 당 무료 30 회. 30 회 후에는 가입 시 평생 라이선스 키 (베타 무제한) 또는 Claude CLI · OpenAI 키 · 로컬 LLM 으로 전환 가능합니다.</p>
+    </details>
+    <details>
+      <summary>완전 오프라인으로 쓸 수 있나요?</summary>
+      <p>네. LM Studio, Ollama, MLX (<code>mlx_lm.server</code>) 모두 OpenAI 호환 로컬 LLM 으로 연결됩니다. 설정 → 어시스턴트 에서 선택 후 base URL / model 입력.</p>
+    </details>
+    <details>
+      <summary>대화 내용이 어디로 가나요?</summary>
+      <p>음성 / 전사 / 회의록 / 메모리 모두 Mac 에 머뭅니다. 외부로 나가는 것은 사용자가 선택한 LLM 호출과 (옵트 아웃 가능한) 익명 진단 메타데이터 뿐.</p>
+    </details>
+    <details>
+      <summary>한국어 외에 어떤 언어를 지원하나요?</summary>
+      <p>STT 는 macOS 가 지원하는 모든 50-60 개 로케일, UI 는 20 개 언어, LLM 응답은 BCP-47 locale 기반 35 개 언어 directive 로 자동 분기됩니다. 통역 모드에서는 입력 언어 → 출력 언어 자유 설정.</p>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Mac 에서 AI 음성 비서를 쓰고 싶은데 어떻게 시작하나요?", "acceptedAnswer": {"@type": "Answer", "text": "Homebrew 가 있으면 'brew tap baryonlabs/talkmode && brew install --cask talkmode' 한 줄. macOS Sequoia 부터는 첫 실행 시 시스템 설정에서 한 번 허용 필요."}},
+    {"@type": "Question", "name": "API 키가 없는데도 쓸 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 가입 / 키 설정 없이 device 당 무료 30 회. 이후에는 가입 시 평생 라이선스 키 또는 Claude CLI / OpenAI 키 / 로컬 LLM 으로 전환."}},
+    {"@type": "Question", "name": "완전 오프라인으로 쓸 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. LM Studio / Ollama / MLX 모두 OpenAI 호환 로컬 LLM 으로 연결 가능."}},
+    {"@type": "Question", "name": "대화 내용이 어디로 가나요?", "acceptedAnswer": {"@type": "Answer", "text": "음성 / 전사 / 회의록 / 메모리 모두 Mac 에 머뭅니다. 외부 전송은 사용자가 선택한 LLM 호출과 (옵트 아웃 가능한) 익명 진단 메타데이터뿐."}},
+    {"@type": "Question", "name": "한국어 외에 어떤 언어를 지원하나요?", "acceptedAnswer": {"@type": "Answer", "text": "STT 는 50-60 개 로케일, UI 는 20 개 언어, LLM 응답은 35 개 언어 directive 분기. 통역 모드에서는 입력/출력 언어 자유 설정."}}
+  ]
+}
+</script>
 <section class="values-strip">
   <div class="values-inner">
     <span class="value"><strong>Free for work.</strong></span>

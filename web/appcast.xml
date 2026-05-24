@@ -6,18 +6,18 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.16</title>
-      <pubDate>일, 24  5월 2026 12:49:33 +0900</pubDate>
-      <sparkle:version>20</sparkle:version>
-      <sparkle:shortVersionString>0.4.16</sparkle:shortVersionString>
+      <title>0.4.17</title>
+      <pubDate>일, 24  5월 2026 13:10:20 +0900</pubDate>
+      <sparkle:version>21</sparkle:version>
+      <sparkle:shortVersionString>0.4.17</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>퇴근(stop) / mode switch 누를 때 앱이 잠시 응답없음 되던 freeze 수정. Minutes 모드를 길게 한 뒤일수록 더 심했음.</li>
-          <li>음성 picker가 Premium / Enhanced / Standard 섹션으로 그룹화 — Premium 음성이 한눈에 보이게.</li>
+          <li>출근(Start)/퇴근(Stop) 누르면 앱이 즉시 응답없음 되던 freeze 수정 — AVAudioEngine 의 main-thread 동기 호출을 background queue 로 분리.</li>
+          <li>에이전트가 대답할 때 사용자가 말하면 음성이 즉시 멈춥니다 (barge-in 기본 ON).</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.16.zip" sparkle:edSignature="e/2tfaeC9HxHTjCzGLfdSjz2OHFP8YGlyHj8CVVCZXxU2mYxsdxAlir/C8nuUxkWDZbZuLBwrJf07GcdoYvJDw==" length="3011281" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.17.zip" sparkle:edSignature="xNgXOI/IvnE4hk/5tvxJExLmxLqqIDMEueF54jNEkWmkB3wzBE5weBz/LC1/rpuDhOYPLnVtWAJJP+a7KnvVDg==" length="3015753" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

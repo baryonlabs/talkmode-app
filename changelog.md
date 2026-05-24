@@ -4,6 +4,19 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.17 — 2026-05-24
+
+### Fixed
+- 출근(Start) / 퇴근(Stop) 시 앱이 즉시 응답없음 되던 freeze 수정.
+  AudioInputStream.start()/stop() 의 engine.prepare/installTap/start/
+  removeTap/stop 가 모두 @MainActor 동기였고 macOS 26 의 TCC + privacy-
+  indicator 처리로 호출당 300–800ms 메인을 잠궜다. 전체 시퀀스를 백그라운드
+  큐로 분리.
+
+### Changed
+- Barge-in 기본 ON. 에이전트가 답할 때 사용자가 350ms+ 말하면 TTS 즉시
+  중단. 자연 대화의 기본값. 끄려면 설정 → Barge-in.
+
 ## 0.4.16 — 2026-05-24
 
 ### Fixed

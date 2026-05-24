@@ -145,10 +145,10 @@ TalkMode is ad-hoc signed (no paid developer certificate), so on **macOS Sequoia
 
 ### Direct download (without Homebrew)
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.21.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.21.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

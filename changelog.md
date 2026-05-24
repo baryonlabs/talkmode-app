@@ -4,6 +4,20 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.22 — 2026-05-24
+
+### Fixed
+- LLM 요청 fail → 퇴근 → 출근 시 응답없음 회귀. 0.4.18 의 sessionTask
+  직렬화로 task 순서는 잡혔지만 각 endSession 가 fire-and-forget 으로
+  background cleanup 을 안 기다려, 새 startSession 의 engine.start() 가
+  이전 engine.stop() 와 같은 AVAudioSession 에서 race 되어 hang 했다.
+  AudioInputStream.stop() async 화 + endSession 가 audioInput / stt.stop
+  모두 await.
+
+### Added
+- MLX provider (Apple Silicon · mlx_lm.server). 설정 → 어시스턴트 → MLX.
+  기본 http://localhost:8080 + mlx-community/Qwen2.5-7B-Instruct-4bit.
+
 ## 0.4.21 — 2026-05-24
 
 ### Added

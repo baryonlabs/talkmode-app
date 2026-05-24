@@ -144,10 +144,10 @@ TalkMode는 ad-hoc 코드 서명 상태(개발자 인증서 미사용)라서, ma
 
 ### 직접 다운로드 (Homebrew 없이)
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.21.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.21.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

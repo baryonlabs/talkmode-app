@@ -366,15 +366,6 @@ brew install --cask talkmode</pre>
         <p>Or use the <a href="/download/TalkMode-0.4.25.zip">Download for macOS</a> button. Unzip, drag into <code>Applications</code>.</p>
       </div>
     </div>
-    <div class="panel gk">
-      <h3>If macOS says &ldquo;TalkMode is blocked&rdquo;</h3>
-      <p>The app is ad-hoc signed (not yet notarized), so Gatekeeper blocks the first launch. Paste these 4 lines into Terminal:</p>
-      <pre><span class="c"># 1) launch once so macOS registers the app</span>
-open '/Applications/TalkMode.app'
-<span class="c"># 2) jump straight to Privacy &amp; Security settings</span>
-open 'x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension'</pre>
-      <p>Then in <b>Privacy &amp; Security</b>, scroll to the bottom and click <b>Open Anyway</b> (&ldquo;그래도 열기&rdquo;), then <b>Open</b> in the confirmation dialog. macOS remembers the choice — later launches open normally.</p>
-    </div>
     <p class="req">Requires an LLM provider — the Claude CLI, Codex CLI, or an OpenAI key. Sparkle keeps the app updated automatically.</p>
   </div>
 </section>

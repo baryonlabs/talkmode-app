@@ -104,7 +104,7 @@ TalkMode **UI भाषा** (मेन्यू, बटन और त्रु�
 
 ---
 
-> 🆕 **Latest features and install guide are in इस अनुवाद.** This translation covers the core docs; the visual install walkthrough (macOS 15+ Gatekeeper unblock), free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
+> 🆕 **Latest features and install guide are in इस अनुवाद.** This translation covers the core docs; the visual install walkthrough, free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
 > · [English readme](https://talkmode.baryon.ai/readme?lang=en) · [한국어 readme](https://talkmode.baryon.ai/readme?lang=ko) · [Step-by-step install guide](https://talkmode.baryon.ai/install) · [Free lifetime license](https://talkmode.baryon.ai/signup)
 
 ## इंस्टॉल
@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### सीधा डाउनलोड
 
-[नवीनतम रिलीज़](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → अनज़िप करें → `Applications` में खींचें → पहले लॉन्च पर macOS कह सकता है "अज्ञात डेवलपर से", राइट-क्लिक करें → एक बार Open करें।
+[नवीनतम रिलीज़](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → अनज़िप करें → `Applications` में खींचें → पहले लॉन्च पर macOS कह सकता है "अज्ञात डेवलपर से", राइट-क्लिक करें → एक बार Open करें।
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

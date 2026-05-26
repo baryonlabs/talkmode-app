@@ -104,7 +104,7 @@ La *salida* de voz usa `AVSpeechSynthesizer` — el mismo motor que Siri / el di
 
 ---
 
-> 🆕 **Latest features and install guide are in esta traducción.** This translation covers the core docs; the visual install walkthrough (macOS 15+ Gatekeeper unblock), free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
+> 🆕 **Latest features and install guide are in esta traducción.** This translation covers the core docs; the visual install walkthrough, free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
 > · [English readme](https://talkmode.baryon.ai/readme?lang=en) · [한국어 readme](https://talkmode.baryon.ai/readme?lang=ko) · [Step-by-step install guide](https://talkmode.baryon.ai/install) · [Free lifetime license](https://talkmode.baryon.ai/signup)
 
 ## Instalación
@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### Descarga directa
 
-[Última versión](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → descomprimir → arrastrar a `Applications` → en el primer lanzamiento macOS puede decir "de un desarrollador no identificado", haz clic derecho → Abrir una vez.
+[Última versión](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → descomprimir → arrastrar a `Applications` → en el primer lanzamiento macOS puede decir "de un desarrollador no identificado", haz clic derecho → Abrir una vez.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

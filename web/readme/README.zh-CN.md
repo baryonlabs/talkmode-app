@@ -103,7 +103,7 @@ TalkMode 将**界面语言**（菜单、按钮和错误消息所用的语言）�
 
 ---
 
-> 🆕 **Latest features and install guide are in this translation.** This translation covers the core docs; the visual install walkthrough (macOS 15+ Gatekeeper unblock), free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
+> 🆕 **Latest features and install guide are in this translation.** This translation covers the core docs; the visual install walkthrough, free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
 > · [English readme](https://talkmode.baryon.ai/readme?lang=en) · [한국어 readme](https://talkmode.baryon.ai/readme?lang=ko) · [Step-by-step install guide](https://talkmode.baryon.ai/install) · [Free lifetime license](https://talkmode.baryon.ai/signup)
 
 ## 安装
@@ -117,10 +117,10 @@ brew install --cask talkmode
 
 ### 直接下载
 
-[最新版本](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → 解压 → 拖入 `Applications` → 首次启动时 macOS 可能会提示"来自身份不明的开发者"，右键点击 → 选择一次"打开"。
+[最新版本](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → 解压 → 拖入 `Applications` → 首次启动时 macOS 可能会提示"来自身份不明的开发者"，右键点击 → 选择一次"打开"。
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

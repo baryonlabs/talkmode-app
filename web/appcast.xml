@@ -6,18 +6,17 @@
     <description>TalkMode app updates</description>
     <language>en</language>
     <item>
-      <title>0.4.23</title>
-      <pubDate>화, 26  5월 2026 14:58:53 +0900</pubDate>
-      <sparkle:version>27</sparkle:version>
-      <sparkle:shortVersionString>0.4.23</sparkle:shortVersionString>
+      <title>0.4.24</title>
+      <pubDate>화, 26  5월 2026 15:09:42 +0900</pubDate>
+      <sparkle:version>28</sparkle:version>
+      <sparkle:shortVersionString>0.4.24</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>Apple notarization 통과. 첫 실행 시 "확인되지 않은 개발자" 경고가 더 이상 나오지 않습니다 — 더블클릭하면 그냥 열립니다.</li>
-          <li>설치 가이드의 Step 3 (Gatekeeper 풀기) 통째 삭제, 설치가 두 단계로 단순화됨.</li>
+          <li>출근→퇴근→출근 시 카메라 race로 응답없음 되던 freeze 수정.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip" sparkle:edSignature="uOkmrNOzIl1XAMHE14a30gq71V8q7+BRCyEyhB9V3kCgkqrLu9cbVKYS7q5MsEiekHpgRNMF4x5pKvifzPDvAg==" length="3101393" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip" sparkle:edSignature="kGsxe+wy95VRoqRFWv5UO5ZGPVFcwcz9FuERKUOYpCSCu3gAbJxpYcVN/REnouRW1GTfcvdev/3ftbdZ5b/WBA==" length="3103388" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

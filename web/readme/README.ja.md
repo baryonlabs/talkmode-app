@@ -103,7 +103,7 @@ Mac の Speech フレームワークが対応するものすべて — macOS Son
 
 ---
 
-> 🆕 **Latest features and install guide are in this translation.** This translation covers the core docs; the visual install walkthrough (macOS 15+ Gatekeeper unblock), free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
+> 🆕 **Latest features and install guide are in this translation.** This translation covers the core docs; the visual install walkthrough, free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
 > · [English readme](https://talkmode.baryon.ai/readme?lang=en) · [한국어 readme](https://talkmode.baryon.ai/readme?lang=ko) · [Step-by-step install guide](https://talkmode.baryon.ai/install) · [Free lifetime license](https://talkmode.baryon.ai/signup)
 
 ## インストール
@@ -117,10 +117,10 @@ brew install --cask talkmode
 
 ### 直接ダウンロード
 
-[最新リリース](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → 解凍 → `Applications` にドラッグ → 初回起動時に macOS が「不明な開発者」と表示する場合があるので、右クリック → 一度「開く」を選択。
+[最新リリース](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → 解凍 → `Applications` にドラッグ → 初回起動時に macOS が「不明な開発者」と表示する場合があるので、右クリック → 一度「開く」を選択。
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

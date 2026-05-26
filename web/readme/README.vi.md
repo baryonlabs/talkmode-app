@@ -104,7 +104,7 @@ Luôn có sẵn trên một bản cài macOS Sonoma+ tiêu chuẩn (danh sách m
 
 ---
 
-> 🆕 **Latest features and install guide are in bản dịch này.** This translation covers the core docs; the visual install walkthrough (macOS 15+ Gatekeeper unblock), free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
+> 🆕 **Latest features and install guide are in bản dịch này.** This translation covers the core docs; the visual install walkthrough, free lifetime license signup, Translate mode, Obsidian sync, local LLM (LM Studio / Ollama / MLX) are only on the English / Korean pages:
 > · [English readme](https://talkmode.baryon.ai/readme?lang=en) · [한국어 readme](https://talkmode.baryon.ai/readme?lang=ko) · [Step-by-step install guide](https://talkmode.baryon.ai/install) · [Free lifetime license](https://talkmode.baryon.ai/signup)
 
 ## Cài đặt
@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### Tải xuống trực tiếp
 
-[Bản phát hành mới nhất](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → giải nén → kéo vào `Applications` → ở lần khởi chạy đầu tiên macOS có thể nói "từ nhà phát triển không xác định", nhấp chuột phải → Open một lần.
+[Bản phát hành mới nhất](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → giải nén → kéo vào `Applications` → ở lần khởi chạy đầu tiên macOS có thể nói "từ nhà phát triển không xác định", nhấp chuột phải → Open một lần.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

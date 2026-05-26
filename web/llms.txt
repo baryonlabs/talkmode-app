@@ -7,7 +7,7 @@ The macOS app behaves like a coworker, not a chatbot — it knows when to take a
 ## Core docs
 
 - [Homepage](https://talkmode.baryon.ai/): Overview, screenshots, install one-liner.
-- [Visual install guide](https://talkmode.baryon.ai/install): Step-by-step screenshots — Homebrew install, TalkMode install, macOS 15+ Gatekeeper unblock.
+- [Visual install guide](https://talkmode.baryon.ai/install): Step-by-step screenshots — Homebrew install, TalkMode install.
 - [Full README](https://talkmode.baryon.ai/readme): Modes, permissions, persona, skills, supported languages, privacy policy. 20 UI language translations available via ?lang=XX.
 - [Free lifetime license signup](https://talkmode.baryon.ai/signup): Email + optional 4-question survey + newsletter opt-in → license key for unlimited beta-period usage.
 

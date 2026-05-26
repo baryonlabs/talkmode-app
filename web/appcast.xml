@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.34</title>
-      <pubDate>화, 26  5월 2026 16:48:18 +0900</pubDate>
-      <sparkle:version>38</sparkle:version>
-      <sparkle:shortVersionString>0.4.34</sparkle:shortVersionString>
+      <title>0.4.35</title>
+      <pubDate>화, 26  5월 2026 16:59:16 +0900</pubDate>
+      <sparkle:version>39</sparkle:version>
+      <sparkle:shortVersionString>0.4.35</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>AEC on 시 STT silent 문제 진단/완화 — voice-processing 토글 명시 reset + format/RMS 진단 로그.</li></ul>
+        <ul><li>카메라 끄면 응답없음 되던 회귀 — CameraStream 에 있던 동일 lock 재진입 deadlock 수정 (0.4.30 의 AudioInputStream fix 와 같은 패턴).</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.34.zip" sparkle:edSignature="gMZC/Wza+hTHVK+HBarAmjs7DtDB/5U3OrowfYcopi/yPi90IGl+QQRM7o8CTef10qcezCl+H7g0uzx/iiVmDw==" length="3111698" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.35.zip" sparkle:edSignature="aWxm+ZQ5vdbrERShiSSRJhKe2dzRJa1+9USbNFYEdIykgP45Wwiq9B/VsEq/bBJ6S4KfEEufyo2/1AEXifyABQ==" length="3111608" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

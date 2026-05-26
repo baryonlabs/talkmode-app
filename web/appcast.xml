@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.31</title>
-      <pubDate>화, 26  5월 2026 16:17:02 +0900</pubDate>
-      <sparkle:version>35</sparkle:version>
-      <sparkle:shortVersionString>0.4.31</sparkle:shortVersionString>
+      <title>0.4.32</title>
+      <pubDate>화, 26  5월 2026 16:24:15 +0900</pubDate>
+      <sparkle:version>36</sparkle:version>
+      <sparkle:shortVersionString>0.4.32</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>freeze-dump.sh 가 실제 실행 중인 bundle path 의 버전을 보고 — /Applications 의 옛 버전을 잘못 보고하던 helper 자체 버그 수정.</li></ul>
+        <ul><li>무료 호스팅 quota 가 device 당 30회 → 1000회로 늘었습니다. 이미 30회 lock 됐던 사용자는 자동으로 970회 더 사용 가능.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip" sparkle:edSignature="9jhsrcgyahz67/PDfiiGia5vGenEvnGq5Bsv3MniHFUfTmhN+rKdYCvYkCqBs3Ovc8NH1f9RcEEMnZYTuRBLDg==" length="3109694" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.32.zip" sparkle:edSignature="0WVkzs4vp6Xot/9h42/iGcqqLlEdttT0BolnVQRhtsZHr2tvnAadKW+4ccNPJ4S4QsZgP3l5T09Wp5Lhcu5JAw==" length="3109688" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

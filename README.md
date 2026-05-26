@@ -17,7 +17,7 @@ The macOS app source is maintained in a separate repository (https://github.com/
 - **Translate mode** — speak in language A, the assistant speaks back in language B.
 - **Obsidian vault sync** — meetings / conversations / memories / translations land as Markdown in your vault. No plugin needed.
 - **Local LLM providers** — LM Studio, Ollama, and now MLX (`mlx_lm.server`) on Apple Silicon. Fully offline voice assistant possible.
-- **Hosted Baryon backend default** — first-time users get 30 free calls per device, no API key, no setup. Switch to Claude / Codex / OpenAI / local later.
+- **Hosted Baryon backend default** — first-time users get 1000 free calls per device, no API key, no setup. Switch to Claude / Codex / OpenAI / local later.
 
 ## What's in this repo
 

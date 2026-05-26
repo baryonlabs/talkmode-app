@@ -212,9 +212,9 @@
   "applicationCategory": "Productivity",
   "operatingSystem": "macOS 14.0+",
   "url": "https://talkmode.baryon.ai/",
-  "downloadUrl": "https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip",
+  "downloadUrl": "https://talkmode.baryon.ai/download/TalkMode-0.4.32.zip",
   "description": "Real-time Korean and 35-language voice assistant for macOS with sub-second turn-taking, on-device speaker diarization, Obsidian sync, and local LLM support (LM Studio, Ollama, MLX).",
-  "softwareVersion": "0.4.31",
+  "softwareVersion": "0.4.32",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -259,7 +259,7 @@
       Instant Korean voice, on-device, your terms.
     </p>
     <div class="cta">
-      <a class="btn btn-primary" href="/download/TalkMode-0.4.31.zip">Download for macOS</a>
+      <a class="btn btn-primary" href="/download/TalkMode-0.4.32.zip">Download for macOS</a>
       <a class="btn btn-ghost" href="/readme.html">Read the docs</a>
       <a class="btn btn-ghost" href="https://www.producthunt.com/posts/talkmode-a-real-assistant-on-your-mac?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-talkmode-a-real-assistant-on-your-mac" target="_blank" rel="noopener" style="border-color: rgba(255,97,84,0.5); color: #ff6154;">🚀 Upvote on Product Hunt</a>
     </div>
@@ -268,7 +268,7 @@
       <img src="https://img.shields.io/badge/Apple%20silicon-arm64-success" alt="Apple silicon" />
       <a href="https://www.producthunt.com/posts/talkmode-a-real-assistant-on-your-mac?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-talkmode-a-real-assistant-on-your-mac" target="_blank" rel="noopener" style="display: inline-flex; vertical-align: middle; margin-left: 4px;"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1154315&theme=dark" alt="TalkMode — a real assistant on your Mac | Product Hunt" style="width: 200px; height: 43px;" width="200" height="43" /></a>
     </div>
-    <p class="verline">Latest release <b id="version-text">v0.4.31</b> &middot; macOS 14+, Apple silicon</p>
+    <p class="verline">Latest release <b id="version-text">v0.4.32</b> &middot; macOS 14+, Apple silicon</p>
   </div>
 </section>
 
@@ -362,8 +362,8 @@ brew install --cask talkmode</pre>
       <div class="panel">
         <h3>Direct download</h3>
         <pre><span class="c"># signed .app bundle</span>
-<span id="curl-line">curl -LO https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip</span></pre>
-        <p>Or use the <a href="/download/TalkMode-0.4.31.zip">Download for macOS</a> button. Unzip, drag into <code>Applications</code>.</p>
+<span id="curl-line">curl -LO https://talkmode.baryon.ai/download/TalkMode-0.4.32.zip</span></pre>
+        <p>Or use the <a href="/download/TalkMode-0.4.32.zip">Download for macOS</a> button. Unzip, drag into <code>Applications</code>.</p>
       </div>
     </div>
     <p class="req">Requires an LLM provider — the Claude CLI, Codex CLI, or an OpenAI key. Sparkle keeps the app updated automatically.</p>
@@ -380,7 +380,7 @@ brew install --cask talkmode</pre>
     </details>
     <details>
       <summary>API 키가 없는데도 쓸 수 있나요?</summary>
-      <p>네. 키 설정 없이 device 당 무료 30 회. 30 회 후에는 <code>설정 → 어시스턴트</code> 에서 Claude CLI / Codex CLI / OpenAI 키 / 로컬 LLM (LM Studio · Ollama · MLX) 중 하나로 전환할 수 있어요.</p>
+      <p>네. 키 설정 없이 device 당 무료 1000회. 30 회 후에는 <code>설정 → 어시스턴트</code> 에서 Claude CLI / Codex CLI / OpenAI 키 / 로컬 LLM (LM Studio · Ollama · MLX) 중 하나로 전환할 수 있어요.</p>
     </details>
     <details>
       <summary>완전 오프라인으로 쓸 수 있나요?</summary>
@@ -407,7 +407,7 @@ brew install --cask talkmode</pre>
   "@type": "FAQPage",
   "mainEntity": [
     {"@type": "Question", "name": "Mac 에서 AI 음성 비서를 쓰고 싶은데 어떻게 시작하나요?", "acceptedAnswer": {"@type": "Answer", "text": "Homebrew 가 있으면 'brew tap baryonlabs/talkmode && brew install --cask talkmode' 한 줄. 0.4.23 부터 Apple notarized 라 첫 실행 시 Gatekeeper 경고 없이 곧바로 열립니다."}},
-    {"@type": "Question", "name": "API 키가 없는데도 쓸 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 키 설정 없이 device 당 무료 30회. 이후에는 Claude CLI / Codex CLI / OpenAI 키 / 로컬 LLM (LM Studio · Ollama · MLX) 중 하나로 전환."}},
+    {"@type": "Question", "name": "API 키가 없는데도 쓸 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 키 설정 없이 device 당 무료 1000회. 이후에는 Claude CLI / Codex CLI / OpenAI 키 / 로컬 LLM (LM Studio · Ollama · MLX) 중 하나로 전환."}},
     {"@type": "Question", "name": "완전 오프라인으로 쓸 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. LM Studio · Ollama · MLX 세 가지 로컬 backend 모두 OpenAI 호환. STT / TTS / 시선 추적도 모두 on-device."}},
     {"@type": "Question", "name": "대화 내용이 어디로 가나요?", "acceptedAnswer": {"@type": "Answer", "text": "음성 / 전사 / 회의록 / 메모리 모두 Mac 에 머뭅니다. 외부 전송은 사용자가 선택한 LLM 호출과 옵트 아웃 가능한 익명 진단 메타데이터뿐. Obsidian vault sync 도 직접 write."}},
     {"@type": "Question", "name": "한국어 외에 어떤 언어를 지원하나요?", "acceptedAnswer": {"@type": "Answer", "text": "STT 50–60 locale, UI 20개 언어, LLM 응답 35개 언어 directive. 통역 모드에서는 입력/출력 언어 자유 설정 — 영어로 말하면 한국어로 답하는 실시간 인터프리터."}},
@@ -432,7 +432,7 @@ brew install --cask talkmode</pre>
   <div class="wrap">
     <div class="foot">
       <a href="/readme.html">Documentation</a>
-      <a href="/download/TalkMode-0.4.31.zip">Download</a>
+      <a href="/download/TalkMode-0.4.32.zip">Download</a>
       <a href="https://github.com/baryonlabs/talkmode-app/discussions">Discussions</a>
       <a href="https://github.com/baryonlabs/talkmode-app/issues">Issues</a>
       <a href="https://www.gnu.org/licenses/agpl-3.0.html">License (AGPL-3.0)</a>

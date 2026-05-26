@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### Transferência direta
 
-[Versão mais recente](https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip) → descompactar → arrastar para `Applications` → no primeiro arranque o macOS pode dizer "de um programador não identificado", clique com o botão direito → Abrir uma vez.
+[Versão mais recente](https://talkmode.baryon.ai/download/TalkMode-0.4.32.zip) → descompactar → arrastar para `Applications` → no primeiro arranque o macOS pode dizer "de um programador não identificado", clique com o botão direito → Abrir uma vez.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.32.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

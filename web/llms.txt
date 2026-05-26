@@ -1,6 +1,6 @@
 # TalkMode
 
-> Real-time Korean (and 35-language) voice assistant for macOS. Sub-second turn-taking with a multimodal (voice + gaze + transcript) endpointer. On-device speaker diarization. Free hosted backend with 30 calls per device, then bring your own Claude / Codex / OpenAI / LM Studio / Ollama / MLX provider. AGPL-3.0.
+> Real-time Korean (and 35-language) voice assistant for macOS. Sub-second turn-taking with a multimodal (voice + gaze + transcript) endpointer. On-device speaker diarization. Free hosted backend with 1000 calls per device, then bring your own Claude / Codex / OpenAI / LM Studio / Ollama / MLX provider. AGPL-3.0.
 
 The macOS app behaves like a coworker, not a chatbot — it knows when to take a turn from voice activity, the language particles in your transcript, and (optionally) where your eyes are looking. Four modes: Conversation, Meeting Minutes (with speaker diarization), Brainstorm, Counseling, plus Translate (real-time interpreter). Optional Obsidian vault sync writes meetings / conversations / memories / translations as Markdown directly into the user's vault.
 

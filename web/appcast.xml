@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.35</title>
-      <pubDate>화, 26  5월 2026 16:59:16 +0900</pubDate>
-      <sparkle:version>39</sparkle:version>
-      <sparkle:shortVersionString>0.4.35</sparkle:shortVersionString>
+      <title>0.4.36</title>
+      <pubDate>화, 26  5월 2026 17:25:41 +0900</pubDate>
+      <sparkle:version>40</sparkle:version>
+      <sparkle:shortVersionString>0.4.36</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>카메라 끄면 응답없음 되던 회귀 — CameraStream 에 있던 동일 lock 재진입 deadlock 수정 (0.4.30 의 AudioInputStream fix 와 같은 패턴).</li></ul>
+        <ul><li>통역 모드의 대화 탭에 source / target 언어 picker 추가 — 설정으로 안 들어가도 turn 사이에 언어 바로 전환.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.35.zip" sparkle:edSignature="aWxm+ZQ5vdbrERShiSSRJhKe2dzRJa1+9USbNFYEdIykgP45Wwiq9B/VsEq/bBJ6S4KfEEufyo2/1AEXifyABQ==" length="3111608" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.36.zip" sparkle:edSignature="g8V/Bz1+KDP5cDMtynf8Xn+NwrL1gsRpSaHxIq9qHgVwSS7lAVNGVNUbYHa2YJ6x3sFGJs0eLNE/WUl8a94fDA==" length="3119009" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

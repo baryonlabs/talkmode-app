@@ -5,15 +5,19 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.39</title>
-      <pubDate>화, 26  5월 2026 17:56:11 +0900</pubDate>
-      <sparkle:version>43</sparkle:version>
-      <sparkle:shortVersionString>0.4.39</sparkle:shortVersionString>
+      <title>0.4.41</title>
+      <pubDate>Tue, 26 May 2026 20:53:35 +0900</pubDate>
+      <sparkle:version>45</sparkle:version>
+      <sparkle:shortVersionString>0.4.41</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>첫 실행 시 UI 언어와 STT locale 이 macOS 의 사용자 1순위 언어로 자동 설정. 미국 사용자가 한국어 화면 보던 문제 fix.</li></ul>
+        <ul>
+          <li><b>TTS 1초 종료 회귀 fix.</b> 0.4.39 까지 default ON 이던 "말로 끼어들기"(barge-in) 가 기존 사용자 UserDefaults 에 잔존 → 자기 TTS 가 mic echo 로 들어와 350ms 임계값을 넘기면 ttsQueue.cancel 이 호출되어 발화가 약 1초만에 끊기던 회귀. 0.4.41 첫 실행 시 한 번 OFF 로 마이그레이션. 다시 켜려면 Settings 토글.</li>
+          <li><b>쉬기 버튼 — 띠링 사운드 + 텍스트만.</b> 쉬기 시작 시 비서가 한 문장 발화하던 동작 제거. "Tink" 시스템 사운드 + chat bubble 의 텍스트만. 휴식을 비서 음성이 끊지 않도록.</li>
+          <li><b>0.4.40 누적 변경 포함.</b> 진단 탭을 "개발자 모드" 토글 뒤로 숨김. AEC / 말로 끼어들기에 "실험적" 배지. 회의록 자동 .md 사이드카(YAML frontmatter + speaker stats). Baryon Labs identity 시스템 프롬프트 강제 주입. codex CLI 진단 로그.</li>
+        </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.39.zip" sparkle:edSignature="QwpZQ9QecM/IxpLzPtHv15v2okY4X2UkaVV3ozo5CSI2qbRjmM3/qqNjXeriPXOV00lDnCt3klkCBYv4GMiLAQ==" length="3139352" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.41.zip" sparkle:edSignature="CES4yMVJYXoELOA9V0k8atoCvxfezBOHIdqCMaTJn+8b3uDi+YS74NyP84GFA1Z6QXFvqUFQfeK1W9DnAHueBg==" length="3155758" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

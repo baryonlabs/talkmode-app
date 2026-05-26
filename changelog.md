@@ -35,6 +35,50 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.41 — 2026-05-26
+
+### Fixed
+- **TTS cutting off after about a second.** 0.4.39 and earlier defaulted
+  `bargeInEnabled` (Talk to interrupt) to ON. The 0.4.40 default flip
+  did not help existing users because UserDefaults already held `true`,
+  so the assistant's own TTS leaked into the mic and tripped
+  BargeInDetector's 350 ms threshold — `ttsQueue.cancel()` ended the
+  utterance after a second. 0.4.41 adds a one-shot migration that
+  resets the flag to OFF on first launch under this build. Re-enable
+  it from Settings if you want the experimental behavior.
+
+### Changed
+- The 쉬기 (rest) button no longer speaks the confirmation message.
+  You get a short "Tink" chime and the text appears in the chat —
+  one fewer assistant utterance to echo back into the mic, and the
+  break starts cleanly.
+
+## 0.4.40 — 2026-05-26
+
+### Added
+- **Developer mode toggle** in Settings. The Diagnostics tab and
+  internal probe toggles are hidden by default — regular users see
+  Talk / Agent / Settings only. Flip Settings → "Developer mode" ON
+  to expose them.
+- **"Experimental" badges** on Echo cancellation (AEC) and Talk to
+  interrupt. Both default OFF; the badge is the visible cue that
+  these vary by mic/room setup.
+- **Meeting minutes `.md` sidecar.** Each session writes `.caf` audio
+  + `.txt` transcript + a structured `.md` file with YAML frontmatter
+  (`created`, `ended`, `audio_file`, `utterance_count`, per-speaker
+  counts) and a chronological `## HH:MM:SS — Speaker N` body.
+  Independent of Obsidian sync.
+
+### Changed
+- LLM system prompt force-injects Baryon Labs identity. Models reply
+  "I'm TalkMode, a voice assistant from Baryon Labs" when asked
+  "what model are you?" — no leakage of the underlying base model
+  (Qwen / Claude / GPT / Llama / Gemini).
+- codex CLI diagnostic logging — spawned binary path + argv +
+  non-zero-exit stderr now go through OSLog
+  (`subsystem=app.talkmode category=cli`) so spawn failures appear
+  in `log show --process TalkMode`.
+
 ## 0.4.36 — 2026-05-26
 
 ### Added

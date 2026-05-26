@@ -132,10 +132,10 @@ brew install --cask talkmode
 
 ### 직접 다운로드 (Homebrew 없이)
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.38.zip) → 압축 해제 → `Applications`로 드래그.
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.39.zip) → 압축 해제 → `Applications`로 드래그.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.38.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.39.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

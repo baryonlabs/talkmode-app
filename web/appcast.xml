@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.29</title>
-      <pubDate>화, 26  5월 2026 15:53:10 +0900</pubDate>
-      <sparkle:version>33</sparkle:version>
-      <sparkle:shortVersionString>0.4.29</sparkle:shortVersionString>
+      <title>0.4.30</title>
+      <pubDate>화, 26  5월 2026 16:08:27 +0900</pubDate>
+      <sparkle:version>34</sparkle:version>
+      <sparkle:shortVersionString>0.4.30</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>응답없음 발생 시 진단 helper 자동 설치 — bash ~/.talk_mode_mac/freeze-dump.sh 한 줄로 sample + log + state 캡쳐.</li></ul>
+        <ul><li>드디어 진짜 root cause 잡힘 — AudioInputStream 의 stop 안에서 lock 재진입 deadlock. 0.4.22 / 0.4.24 / 0.4.28 의 모든 freeze 증상의 근본 원인이 이것이었음.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.29.zip" sparkle:edSignature="C12f/ko8HMIwmmGpX52zbH7Y1PEBaKA3OpdJMhxomkaNP6mWvx1VRqD3XZOPvUuDjjmufxpaPB6UgYChBn1SBw==" length="3109409" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.30.zip" sparkle:edSignature="F5FFdcWiLY9VVXf3ObVnoMIW8iJuwHP+HrWpJUyl+FJkM7vU2+XDw+h4FVlWeEXU6ks4aTWoKmL/dHDWww/tAQ==" length="3109361" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

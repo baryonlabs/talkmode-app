@@ -35,6 +35,22 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.42 — 2026-05-26
+
+### Added
+- STT brand vocabulary hint. `SpeechAnalyzer` receives an
+  `AnalysisContext` with `Baryon Labs`, `바리온랩스`, `TalkMode`,
+  `톡모드` so our own product names are no longer mis-recognized as
+  `Byron Labs` / `배리온 랩스`. Contextual biasing — general words
+  are unaffected.
+- Three chat panel buttons:
+  - **Copy all** — copies the visible conversation as plain text
+    (`Me: ...` / `Assistant: ...`).
+  - **Clear conversation** — confirmation dialog, clears history +
+    LLM context.
+  - **Hide / Show chat** — collapses the chat scrollview so other
+    panels get the screen.
+
 ## 0.4.41 — 2026-05-26
 
 ### Fixed

@@ -5,19 +5,18 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.41</title>
-      <pubDate>Tue, 26 May 2026 20:53:35 +0900</pubDate>
-      <sparkle:version>45</sparkle:version>
-      <sparkle:shortVersionString>0.4.41</sparkle:shortVersionString>
+      <title>0.4.42</title>
+      <pubDate>Tue, 26 May 2026 21:27:30 +0900</pubDate>
+      <sparkle:version>46</sparkle:version>
+      <sparkle:shortVersionString>0.4.42</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>TTS 1초 종료 회귀 fix.</b> 0.4.39 까지 default ON 이던 "말로 끼어들기"(barge-in) 가 기존 사용자 UserDefaults 에 잔존 → 자기 TTS 가 mic echo 로 들어와 350ms 임계값을 넘기면 ttsQueue.cancel 이 호출되어 발화가 약 1초만에 끊기던 회귀. 0.4.41 첫 실행 시 한 번 OFF 로 마이그레이션. 다시 켜려면 Settings 토글.</li>
-          <li><b>쉬기 버튼 — 띠링 사운드 + 텍스트만.</b> 쉬기 시작 시 비서가 한 문장 발화하던 동작 제거. "Tink" 시스템 사운드 + chat bubble 의 텍스트만. 휴식을 비서 음성이 끊지 않도록.</li>
-          <li><b>0.4.40 누적 변경 포함.</b> 진단 탭을 "개발자 모드" 토글 뒤로 숨김. AEC / 말로 끼어들기에 "실험적" 배지. 회의록 자동 .md 사이드카(YAML frontmatter + speaker stats). Baryon Labs identity 시스템 프롬프트 강제 주입. codex CLI 진단 로그.</li>
+          <li><b>STT 어휘 hint — Baryon Labs / 바리온랩스 인식 향상.</b> SpeechAnalyzer 의 AnalysisContext 에 brand 단어를 contextual hint 로 등록. 자기 이름이 "Byron Labs", "배리온 랩스" 로 잘못 잡히던 회귀 해소. 일반 단어 인식에는 영향 없음.</li>
+          <li><b>채팅 영역 3개 버튼.</b> 전체 복사(`나: …` 형식 plain text 로 클립보드), 대화 지우기(확인 다이얼로그 → history + LLM context 초기화), 대화 보기 닫기/열기(다른 패널이 화면을 차지하도록 ScrollView collapse). 한국어/영어 UI 모두 대응.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.41.zip" sparkle:edSignature="CES4yMVJYXoELOA9V0k8atoCvxfezBOHIdqCMaTJn+8b3uDi+YS74NyP84GFA1Z6QXFvqUFQfeK1W9DnAHueBg==" length="3155758" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.42.zip" sparkle:edSignature="BSnip1L6PDAixqI3+kN0rWD0GA69SBbW/o/Q0bF18uooJ6T4B8GPYEYWeFk81sWbG2F3i6eU9jKv1EUbLjfnCA==" length="3170455" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

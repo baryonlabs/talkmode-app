@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### Unduhan langsung
 
-[Rilis terbaru](https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip) → ekstrak → seret ke `Applications` → pada peluncuran pertama macOS mungkin berkata "dari pengembang tak dikenal", klik kanan → Open sekali.
+[Rilis terbaru](https://talkmode.baryon.ai/download/TalkMode-0.4.25.zip) → ekstrak → seret ke `Applications` → pada peluncuran pertama macOS mungkin berkata "dari pengembang tak dikenal", klik kanan → Open sekali.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.24.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.25.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

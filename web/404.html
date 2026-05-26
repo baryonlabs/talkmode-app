@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 — TalkMode</title>
+<meta name="description" content="Page not found. TalkMode — real-time Korean voice assistant for macOS." />
+<meta name="robots" content="noindex,follow" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+<!-- PostHog product analytics -->
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Mi Ri init Vi Gi Rr Wi Ji Bi capture calculateEventProperties tn register register_once register_for_session unregister unregister_for_session an getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync un identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty nn Xi createPersonProfile setInternalOrTestUser sn Hi cn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ki debug Lr rn getPageViewId captureTraceFeedback captureTraceMetric Di".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_Uywz570Hy28UGO5QqkHwpTirIG5rkltetpfYcsGkLrX', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-01-30',
+        person_profiles: 'identified_only',
+    })
+</script>
+
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1WQBLGEZL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z1WQBLGEZL');
+</script>
+
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #11141b;
+    --border: #232838;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --brand: #4c71f2;
+    --brand-2: #7e3ad6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg) radial-gradient(900px 420px at 50% -120px, rgba(76,113,242,0.18) 0%, transparent 70%);
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .not-found { width: 100%; max-width: 620px; text-align: center; }
+  .logo { width: 96px; height: 96px; display: block; margin: 0 auto 24px; filter: drop-shadow(0 12px 28px rgba(76,113,242,0.32)); }
+  .eyebrow {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 30px; margin-bottom: 18px; padding: 2px 14px;
+    border: 1px solid var(--border); border-radius: 999px;
+    background: var(--panel); color: var(--muted);
+    font-size: 14px; font-weight: 600;
+  }
+  h1 {
+    font-size: 52px; letter-spacing: -0.03em; line-height: 1.1;
+    background: linear-gradient(135deg, var(--text), #c0c8d8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  p { max-width: 520px; margin: 16px auto 0; color: var(--muted); font-size: 18px; }
+  .cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: 13px 24px; border-radius: 10px;
+    font-size: 15px; font-weight: 600;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(76,113,242,0.32);
+  }
+  .btn-primary:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn-ghost {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+  }
+  .btn-ghost:hover { text-decoration: none; border-color: var(--brand); }
+  @media (max-width: 760px) {
+    h1 { font-size: 38px; }
+    p { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+  <main class="not-found">
+    <img class="logo" src="/favicon.svg" alt="TalkMode" />
+    <span class="eyebrow">404 — Not Found</span>
+    <h1>This page drifted off.</h1>
+    <p>The page you're looking for doesn't exist. The homepage and the docs are still here, though.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="/">Back to home</a>
+      <a class="btn btn-ghost" href="/install">Install guide</a>
+    </div>
+  </main>
+</body>
+</html>

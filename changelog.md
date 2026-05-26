@@ -4,6 +4,11 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## Website — 2026-05-26
+
+### Added
+- `web/404.html` — branded dark-mode 404 page (PR #2 by @Shinyvedaas, polished to match the site palette + analytics + noindex).
+
 ## 0.4.23 — 2026-05-26
 
 ### Added

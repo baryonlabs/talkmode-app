@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.37</title>
-      <pubDate>화, 26  5월 2026 17:36:35 +0900</pubDate>
-      <sparkle:version>41</sparkle:version>
-      <sparkle:shortVersionString>0.4.37</sparkle:shortVersionString>
+      <title>0.4.38</title>
+      <pubDate>화, 26  5월 2026 17:49:59 +0900</pubDate>
+      <sparkle:version>42</sparkle:version>
+      <sparkle:shortVersionString>0.4.38</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>스피커 picker UI 추가 (Settings → 마이크/스피커). 실제 TTS 라우팅은 다음 release(0.4.38) 에서 적용.</li></ul>
+        <ul><li>최근 추가된 UI 문자열 (통역 strip · 스피커 picker · AEC · Obsidian · 로컬 LLM 안내) 30개 키가 20개 언어 모두에서 현지화 — ja / zh-CN / zh-TW / es / fr / de / it / pt / ru / ar / hi / id / vi / th / tr / nl / pl / sv 까지 fallback 없이 적용.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.37.zip" sparkle:edSignature="mlQ8f6aiN3IWtE8DBJQdI3CJFKaqq8VY7Yn7ArvfHSetHZ4dbbPA8LOSdox+AkRrufjojcBm0OUyyOUfugWWAg==" length="3127079" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.38.zip" sparkle:edSignature="tj2Q0Oj7m/hTI5eTIq5ykBoiVpOEkpnqkStjP7kP0nFAZ+w7uSKre91K/fJyP1g957+okV3dIC9dhBDol45DAQ==" length="3138883" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

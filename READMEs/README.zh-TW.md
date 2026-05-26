@@ -117,10 +117,10 @@ brew install --cask talkmode
 
 ### 直接下載
 
-[最新版本](https://talkmode.baryon.ai/download/TalkMode-0.4.37.zip) → 解壓縮 → 拖入 `Applications` → 首次啟動時 macOS 可能會提示「來自身分不明的開發者」，按右鍵 → 選擇一次「打開」。
+[最新版本](https://talkmode.baryon.ai/download/TalkMode-0.4.38.zip) → 解壓縮 → 拖入 `Applications` → 首次啟動時 macOS 可能會提示「來自身分不明的開發者」，按右鍵 → 選擇一次「打開」。
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.37.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.38.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

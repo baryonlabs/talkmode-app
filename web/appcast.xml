@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.33</title>
-      <pubDate>화, 26  5월 2026 16:28:10 +0900</pubDate>
-      <sparkle:version>37</sparkle:version>
-      <sparkle:shortVersionString>0.4.33</sparkle:shortVersionString>
+      <title>0.4.34</title>
+      <pubDate>화, 26  5월 2026 16:48:18 +0900</pubDate>
+      <sparkle:version>38</sparkle:version>
+      <sparkle:shortVersionString>0.4.34</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>한 번 말한 게 비서 응답을 통해 echo loop 되던 회귀 수정 — barge-in 켜진 상태에서 TTS 음성이 mic 로 새서 STT 가 다시 transcript 만들던 부분 차단.</li></ul>
+        <ul><li>AEC on 시 STT silent 문제 진단/완화 — voice-processing 토글 명시 reset + format/RMS 진단 로그.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.33.zip" sparkle:edSignature="xaI1C4X7f2HgDzDHUBaObEB4XaOUe4OpeMmO1Vx49G26STc2pe3bFxLvWgtyxJgCClJcW7XAhbzyvor9nuBGDA==" length="3109493" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.34.zip" sparkle:edSignature="gMZC/Wza+hTHVK+HBarAmjs7DtDB/5U3OrowfYcopi/yPi90IGl+QQRM7o8CTef10qcezCl+H7g0uzx/iiVmDw==" length="3111698" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

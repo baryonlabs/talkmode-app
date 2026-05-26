@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.36</title>
-      <pubDate>화, 26  5월 2026 17:25:41 +0900</pubDate>
-      <sparkle:version>40</sparkle:version>
-      <sparkle:shortVersionString>0.4.36</sparkle:shortVersionString>
+      <title>0.4.37</title>
+      <pubDate>화, 26  5월 2026 17:36:35 +0900</pubDate>
+      <sparkle:version>41</sparkle:version>
+      <sparkle:shortVersionString>0.4.37</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>통역 모드의 대화 탭에 source / target 언어 picker 추가 — 설정으로 안 들어가도 turn 사이에 언어 바로 전환.</li></ul>
+        <ul><li>스피커 picker UI 추가 (Settings → 마이크/스피커). 실제 TTS 라우팅은 다음 release(0.4.38) 에서 적용.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.36.zip" sparkle:edSignature="g8V/Bz1+KDP5cDMtynf8Xn+NwrL1gsRpSaHxIq9qHgVwSS7lAVNGVNUbYHa2YJ6x3sFGJs0eLNE/WUl8a94fDA==" length="3119009" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.37.zip" sparkle:edSignature="mlQ8f6aiN3IWtE8DBJQdI3CJFKaqq8VY7Yn7ArvfHSetHZ4dbbPA8LOSdox+AkRrufjojcBm0OUyyOUfugWWAg==" length="3127079" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

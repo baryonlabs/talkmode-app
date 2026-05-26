@@ -106,7 +106,7 @@ Speech *output* uses `AVSpeechSynthesizer` — same engine as macOS Siri / dicta
 
 ## Install
 
-Three steps. First-timers need all three.
+Two steps.
 
 ### Step 1 — Install Homebrew (once)
 
@@ -131,24 +131,12 @@ brew install --cask talkmode
 
 `TalkMode.app` lands in `Applications`. Launch via Launchpad or Spotlight.
 
-### Step 3 — Clear the "unidentified developer" warning on first launch
-
-TalkMode is ad-hoc signed (no paid developer certificate), so on **macOS Sequoia (15)** and **Tahoe (26)** the first launch is blocked. **This is normal and only needs to be cleared once.**
-
-1. Double-click TalkMode → "cannot be opened because it is from an unidentified developer" → click **Done**
-2. Open **System Settings → Privacy & Security**
-3. Scroll down to the **Security** section → find "TalkMode was blocked" → click **Open Anyway**
-4. Confirm in the dialog **"Are you sure you want to open this app?"** → **Open**
-5. From here on, normal launches work. You won't need System Settings again.
-
-> On macOS 15+ the old "right-click → Open" trick no longer works. Step 3 above is required.
-
 ### Direct download (without Homebrew)
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip) → unzip → drag into `Applications` → apply **Step 3** above on first launch.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → unzip → drag into `Applications`.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

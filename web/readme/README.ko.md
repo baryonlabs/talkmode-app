@@ -105,7 +105,7 @@ Mac의 Speech 프레임워크가 지원하는 모든 언어 — macOS Sonoma+에
 
 ## 설치
 
-설치는 세 단계입니다. 처음이라면 모두 거쳐야 합니다.
+설치는 두 단계입니다.
 
 ### 1단계 — Homebrew 설치 (한 번만)
 
@@ -130,24 +130,12 @@ brew install --cask talkmode
 
 `Applications` 폴더에 `TalkMode.app` 가 생깁니다. Launchpad나 Spotlight에서 "TalkMode" 검색으로 실행하세요.
 
-### 3단계 — 첫 실행 시 "확인되지 않은 개발자" 경고 풀기
-
-TalkMode는 ad-hoc 코드 서명 상태(개발자 인증서 미사용)라서, macOS **Sequoia (15)** 와 **Tahoe (26)** 에서는 첫 실행이 차단됩니다. **정상이며 한 번만 풀어두면 됩니다.**
-
-1. TalkMode 더블클릭 → "확인되지 않은 개발자라 열 수 없습니다" 경고 → **"완료"** 클릭
-2. **시스템 설정** 열기 → **개인정보 보호 및 보안**
-3. 아래로 스크롤 → **보안** 섹션에 "TalkMode가 차단되었습니다" 항목 → **"그래도 열기"** (또는 "무시하고 열기") 클릭
-4. 확인 대화상자에서 **"위험이 있어도 이 앱을 실행하시겠습니까?"** → **"열기"**
-5. 이후로는 정상 실행됩니다. 시스템 설정에 다시 갈 필요 없음.
-
-> macOS 15 (Sequoia) 부터는 Finder에서 우클릭 → 열기 방법으로는 풀리지 않습니다. 위 3단계가 필수입니다.
-
 ### 직접 다운로드 (Homebrew 없이)
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip) → 압축 해제 → `Applications`로 드래그 → 위 **3단계**를 동일하게 적용.
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip) → 압축 해제 → `Applications`로 드래그.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.22.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.23.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

@@ -4,6 +4,19 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 `MAJOR.MINOR.PATCH`; the app auto-updates via Sparkle from
 [appcast.xml](https://talkmode.baryon.ai/appcast.xml).
 
+## 0.4.23 — 2026-05-26
+
+### Added
+- Apple notarization. Bundle is signed with our Developer ID Application
+  cert and the notarization ticket is stapled onto the .app — first
+  launch no longer triggers the 'unidentified developer' Gatekeeper
+  warning. Inside-out signing of Sparkle.framework now covers Autoupdate
+  + the Mach-Os inside Downloader.xpc / Installer.xpc / Updater.app.
+
+### Changed
+- Install guide drops Step 3 (Gatekeeper unblock) — installation is
+  now two steps: Homebrew + TalkMode.
+
 ## 0.4.22 — 2026-05-24
 
 ### Fixed

@@ -133,10 +133,10 @@ brew install --cask talkmode
 
 ### Direct download (without Homebrew)
 
-[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.27.zip) → unzip → drag into `Applications`.
+[Latest release](https://talkmode.baryon.ai/download/TalkMode-0.4.28.zip) → unzip → drag into `Applications`.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.27.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.28.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

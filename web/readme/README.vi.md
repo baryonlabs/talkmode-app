@@ -118,10 +118,10 @@ brew install --cask talkmode
 
 ### Tải xuống trực tiếp
 
-[Bản phát hành mới nhất](https://talkmode.baryon.ai/download/TalkMode-0.4.27.zip) → giải nén → kéo vào `Applications` → ở lần khởi chạy đầu tiên macOS có thể nói "từ nhà phát triển không xác định", nhấp chuột phải → Open một lần.
+[Bản phát hành mới nhất](https://talkmode.baryon.ai/download/TalkMode-0.4.28.zip) → giải nén → kéo vào `Applications` → ở lần khởi chạy đầu tiên macOS có thể nói "từ nhà phát triển không xác định", nhấp chuột phải → Open một lần.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.27.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.28.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

@@ -114,10 +114,10 @@ brew install --cask talkmode
 
 ### 직접 다운로드
 
-[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.30.zip) → 압축 해제 → `Applications`로 드래그 → 첫 실행 시 macOS가 "확인되지 않은 개발자"라고 할 수 있으니 우클릭 → 한 번 열기.
+[최신 릴리스](https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip) → 압축 해제 → `Applications`로 드래그 → 첫 실행 시 macOS가 "확인되지 않은 개발자"라고 할 수 있으니 우클릭 → 한 번 열기.
 
 ```bash
-curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.30.zip -o TalkMode.zip
+curl -L https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip -o TalkMode.zip
 unzip TalkMode.zip && mv TalkMode.app /Applications/ && open -a TalkMode
 ```
 

@@ -5,15 +5,15 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.30</title>
-      <pubDate>화, 26  5월 2026 16:08:27 +0900</pubDate>
-      <sparkle:version>34</sparkle:version>
-      <sparkle:shortVersionString>0.4.30</sparkle:shortVersionString>
+      <title>0.4.31</title>
+      <pubDate>화, 26  5월 2026 16:17:02 +0900</pubDate>
+      <sparkle:version>35</sparkle:version>
+      <sparkle:shortVersionString>0.4.31</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <ul><li>드디어 진짜 root cause 잡힘 — AudioInputStream 의 stop 안에서 lock 재진입 deadlock. 0.4.22 / 0.4.24 / 0.4.28 의 모든 freeze 증상의 근본 원인이 이것이었음.</li></ul>
+        <ul><li>freeze-dump.sh 가 실제 실행 중인 bundle path 의 버전을 보고 — /Applications 의 옛 버전을 잘못 보고하던 helper 자체 버그 수정.</li></ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.30.zip" sparkle:edSignature="F5FFdcWiLY9VVXf3ObVnoMIW8iJuwHP+HrWpJUyl+FJkM7vU2+XDw+h4FVlWeEXU6ks4aTWoKmL/dHDWww/tAQ==" length="3109361" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.31.zip" sparkle:edSignature="9jhsrcgyahz67/PDfiiGia5vGenEvnGq5Bsv3MniHFUfTmhN+rKdYCvYkCqBs3Ovc8NH1f9RcEEMnZYTuRBLDg==" length="3109694" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

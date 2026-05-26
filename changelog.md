@@ -7,7 +7,178 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
 ## Website — 2026-05-26
 
 ### Added
-- `web/404.html` — branded dark-mode 404 page (PR #2 by @Shinyvedaas, polished to match the site palette + analytics + noindex).
+- `web/404.html` — branded dark-mode 404 page. PR #2 by @Shinyvedaas
+  added the initial light-mode design; we then matched it to the site
+  palette + added PostHog/GA snippets + `noindex` so the not-found
+  page doesn't get indexed.
+- SEO pass: robots.txt + sitemap.xml (with hreflang for 20 languages),
+  per-page canonical, Open Graph + Twitter Cards, Schema.org
+  SoftwareApplication + FAQPage JSON-LD, llms.txt (per llmstxt.org).
+- FAQ section on the homepage (6 questions, mirrored as FAQPage
+  structured data for SERP rich results).
+- Free-for-work values strip above the footer.
+- Google Analytics (gtag.js, G-Z1WQBLGEZL) alongside the existing
+  PostHog product analytics.
+- Install guide: full step-by-step `/install` page with mocked-up
+  macOS dialogs and a real placeholder slot for user-captured
+  screenshots (made obsolete by 0.4.23's Apple notarization — Step 3
+  was removed).
+- Signup page `/signup` with 4-question survey and newsletter opt-in.
+
+### Changed
+- Homepage signup CTA removed (per request); `/signup` page itself
+  stays live for users who navigate directly.
+- All 'unidentified developer' / Gatekeeper-unblock guidance removed
+  from index.html / install.html / 18 translated readmes once 0.4.23
+  notarization made it obsolete.
+- 18 translated readmes get a callout above the Install section
+  pointing at the English / Korean docs for the newest features
+  (Translate, Obsidian sync, local LLM).
+
+## 0.4.36 — 2026-05-26
+
+### Added
+- Translate-mode locale picker right in the conversation tab. Flip
+  source / target language between turns without going to
+  Settings → Language. Settings still owns the canonical control;
+  this is just the in-place shortcut the translate workflow wanted.
+
+## 0.4.35 — 2026-05-26
+
+### Fixed
+- **Camera-off freeze (CameraStream lock re-entrant deadlock).** Same
+  shape as the AudioInputStream bug fixed in 0.4.30 — `stop()` held
+  `self.lock` while calling `continuation.finish()`, whose
+  `onTermination` closure tries to re-acquire the lock. NSLock is
+  non-recursive, so the main thread waited on its own held mutex
+  forever. Toggling the camera off was a reliable repro.
+  Fix: snapshot continuations under the lock, release, then finish().
+  Diagnosed in seconds via `freeze-dump.sh`.
+
+## 0.4.34 — 2026-05-26
+
+### Changed
+- AEC-on still silenced STT in some setups (the 0.4.26 regression).
+  Two changes that should either fix it or pin the exact failing layer:
+  - Explicit reset of `isVoiceProcessingInputMuted` and
+    `isVoiceProcessingBypassed` so a stuck OS-side toggle doesn't mute
+    input when the host turns Voice Processing on.
+  - Log the input format before / after VP, the muted / bypassed / AGC
+    state, and the RMS energy of the first 10 buffers so
+    `freeze-dump.sh` can tell us which layer is wrong on a hung setup.
+
+## 0.4.33 — 2026-05-26
+
+### Fixed
+- **Single 안녕 triggers infinite echo loop with barge-in on.** When
+  AEC was off and barge-in on, the assistant's TTS leaked through
+  laptop speakers into the mic, STT turned the leak into another
+  '안녕' transcript, turn-detector fired, repeat.
+  Barge-in does NOT need STT transcripts to work — `BargeInDetector`
+  watches raw VAD energy. STT transcripts are now suppressed
+  unconditionally while phase == .speaking; user-initiated barge-in
+  still cuts the assistant off the moment the VAD sees real voice
+  activity.
+
+## 0.4.32 — 2026-05-26
+
+### Changed
+- Free hosted-backend quota raised from 30 to 1000 calls per device.
+  Server-side rate limit was bumped; client mirror now matches.
+  Existing users capped at 30 from the old build automatically get 970
+  calls back — the lock is `max(0, maxFree - count)` and `maxFree` is
+  now 1000.
+
+## 0.4.31 — 2026-05-26
+
+### Fixed
+- `freeze-dump.sh` reported the wrong bundle version when the running
+  TalkMode lived outside `/Applications`. The helper now resolves the
+  .app from the live PID's binary path via `ps` and reads that
+  bundle's Info.plist directly. During 0.4.30's debugging session this
+  helper bug misled us for an hour into thinking the user was on 0.4.12
+  when they were actually running a hand-extracted 0.4.24 from `/tmp`.
+
+## 0.4.30 — 2026-05-26
+
+### Fixed
+- ★ **The actual root cause behind every '응답 없음' freeze we have
+  been guessing around since 0.4.18.** Freeze-dump sample finally
+  pinned it:
+
+  ```
+  ConversationEngine.endSession
+    → AudioInputStream.stop                    (AudioInputStream.swift:135)
+      → AsyncStream.Continuation.finish()
+        → closure in AudioInputStream.subscribe (line 174)
+          → _pthread_mutex_firstfit_lock_slow  ← DEADLOCK
+  ```
+
+  `stop()` was holding `self.lock` while iterating `continuations.values`
+  and calling `continuation.finish()` on each. `finish()` synchronously
+  invokes the `onTermination` closure that `subscribe()` set up — that
+  closure also calls `self.lock.lock()`. NSLock is non-recursive, so the
+  same thread waiting on its own held mutex hangs forever. Every
+  'assistant request failed → 퇴근 → 출근 응답없음' freeze report we
+  tried to band-aid in 0.4.22 / 0.4.24 / 0.4.28 was a symptom of this
+  single deadlock.
+  Fix: snapshot continuations under the lock, release the lock, then
+  call `finish()`. `onTermination` is free to acquire the lock — we
+  are not holding it anymore.
+
+## 0.4.29 — 2026-05-26
+
+### Added
+- `~/.talk_mode_mac/freeze-dump.sh` auto-installed on every launch.
+  When the user hits a freeze, they run
+  `bash ~/.talk_mode_mac/freeze-dump.sh` in a second terminal — it
+  captures `/usr/bin/sample` (5s), `/usr/bin/log show` (last 2 min),
+  recent logs/ into a single timestamped file under
+  `~/.talk_mode_mac/diagnostics/`. The maintainer reads that file and
+  gets the exact stuck call site instead of guessing.
+
+## 0.4.28 — 2026-05-24
+
+### Fixed
+- Two compounding patches for the 'request failed twice then 출근 hangs'
+  loop:
+  - `AudioInputStream.stop` and `CameraStream.stop` get 3-second timeouts
+    so a stuck background `stopRunning` / `engine.stop` doesn't block
+    the session task chain forever. Defence-in-depth — 0.4.30 ended up
+    being the real fix.
+  - `fail()` now cancels `llmTask` and `ttsQueue` before the auto-
+    teardown so repeated failures don't accumulate stale streaming work.
+
+## 0.4.27 — 2026-05-24
+
+### Fixed
+- 0.4.26's always-on `setVoiceProcessingEnabled(true)` silenced STT in
+  some setups — mic level showed activity but live transcript stayed
+  empty. AEC is now opt-in via Settings → Behavior → 'Echo cancellation
+  (AEC)'. Default OFF restores 0.4.25 behavior.
+
+## 0.4.26 — 2026-05-24
+
+### Added
+- Acoustic Echo Cancellation via Apple's Voice Processing IO unit. The
+  speaker output signal — including our own TTS — is subtracted from
+  the mic input. Always-on (later reverted to opt-in in 0.4.27 after
+  user-reported regressions).
+
+## 0.4.25 — 2026-05-24
+
+### Fixed
+- 'assistant request failed' left 출근 / 퇴근 buttons unresponsive.
+  `fail()` set phase to .error but left `isEnabled = true`; UI's 출근
+  is gated on `!isEnabled`. Now `fail()` also calls `setEnabled(false)`
+  so the session tears down and 출근 lights up again.
+
+## 0.4.24 — 2026-05-24
+
+### Fixed
+- Freeze on 출근→퇴근→출근 (camera race attempted fix). `CameraStream.stop`
+  made async + endSession awaits it. Defence in depth — the actual root
+  cause turned out to be the AudioInputStream deadlock fixed in 0.4.30.
 
 ## 0.4.23 — 2026-05-26
 

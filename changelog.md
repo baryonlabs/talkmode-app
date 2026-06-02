@@ -35,6 +35,21 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.43 — 2026-06-02
+
+### Fixed
+- **Non-Korean TTS (Chinese / Japanese / Spanish / …) no longer
+  cuts off after about a second.** `SystemSpeechPlayer.resolveVoice`
+  honored the user's picked `selectedVoiceID` (typically a Korean
+  voice) for every utterance, regardless of locale. AVSpeechSynthesizer
+  cannot pronounce non-Korean text with a Korean voice, so `didFinish`
+  fired almost immediately. Most visible in Translate mode
+  (`ko → zh`, `ko → es`) and mixed-locale conversations. The player
+  now compares the picked voice's base language (`ko` / `zh` / `ja`
+  / `en` …) against the target locale; mismatch falls back to
+  `bestVoice(for:gender:)`. Region (`zh-CN` vs `zh-TW`) is
+  intentionally not strict.
+
 ## 0.4.42 — 2026-05-26
 
 ### Added

@@ -13,3 +13,11 @@
 name = "talkmode"
 compatibility_date = "2026-05-16"
 pages_build_output_dir = "."
+
+# Baryon Labs Cloudflare account: 547b317c67d5f8d93bb4463e5f6353f1
+# Pages 의 wrangler.toml 은 `account_id` 키를 거부함 (Workers 전용 옵션). 대신:
+#   export CLOUDFLARE_ACCOUNT_ID=547b317c67d5f8d93bb4463e5f6353f1
+#   wrangler pages deploy ...
+# 또는: wrangler pages deploy ... (env 가 없으면 토큰 권한이 모든 account 를 볼 수
+# 있어야 함). 사용자 OAuth 토큰의 `account:read` scope 가 좁아 자동 조회가 막힌
+# 경우 환경 변수가 필수.

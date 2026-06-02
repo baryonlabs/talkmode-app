@@ -5,21 +5,18 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.44</title>
-      <pubDate>Tue, 02 Jun 2026 20:33:01 +0900</pubDate>
-      <sparkle:version>48</sparkle:version>
-      <sparkle:shortVersionString>0.4.44</sparkle:shortVersionString>
+      <title>0.4.45</title>
+      <pubDate>Tue, 02 Jun 2026 21:17:10 +0900</pubDate>
+      <sparkle:version>49</sparkle:version>
+      <sparkle:shortVersionString>0.4.45</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>Silero VAD (Core ML, on-device).</b> 새 Settings → "VAD engine" picker. Default 는 Energy (RMS+hysteresis) 그대로, 사용자가 Silero 로 전환하면 Apple Neural Engine 가속 ONNX 변환본이 동작. 번들 약 900KB, warmup ~11ms 후 매 36ms window 당 inference <100μs — VAD window 보다 한 자릿수 짧음. 카페·회의실 ambient noise 에서 EnergyVAD 보다 월등히 안정적이라, 다음 릴리스에 barge-in default ON 복귀의 토대.</li>
-          <li><b>미니 모드.</b> 200×200 floating window — 아바타 얼굴 + phase dot 만, 다른 창 위에 떠 있고 마우스 드래그로 자유 이동. 음성 대화는 background 의 같은 ConversationEngine 에서 끊김 없이 진행. 헤더의 arrow.down.right.and.arrow.up.left 버튼 또는 Settings → 동작 → "미니 모드" 토글.</li>
-          <li><b>비-한국어 TTS 1초 종료 회귀 fix (0.4.43 누적).</b> 한국어 voice 가 중국어/일본어/스페인어 발화 시 즉시 didFinish 로 끊기던 회귀 — base-language 매칭 후 mismatch 면 bestVoice 자동 fallback. region (zh-CN vs zh-TW) 은 의도적으로 strict 하지 않음.</li>
-          <li><b>발화 중 시선 이탈 → 즉시 thinking.</b> AdaptiveTurnDetector.fireFastNow 의 mic-active reject 가 gaze 핸드오프 trigger 일 때는 우회. "I'm finishing — I look away" 자연 패턴이 다시 동작.</li>
-          <li>73 unit tests pass (이전 50 → +23). 신규 suite: VoiceLocaleMatchTests, SileroVADDownloaderTests, VADEnginePickerTests, MiniModeSettingsTests + gaze fast-fire 2개.</li>
+          <li><b>릴리스 인프라 정리.</b> scripts/release.sh 가 .env (gitignored) 를 시작 시 auto-source — wrangler pages deploy 와 notarytool 이 CLOUDFLARE_ACCOUNT_ID 등 필요한 env 를 자동으로 가져감. .env.example 에 형식 + 코멘트.</li>
+          <li>사용자 facing 동작은 0.4.44 와 동일 — Silero VAD / 미니 모드 / voice·locale / gaze fix 그대로. 이 release 는 자동 source 경로를 실 deploy 로 검증하고 main 과 release artifact 의 sync 를 맞추기 위함.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.44.zip" sparkle:edSignature="2Q6ieeIXy7xM755l37Z1f9nXgcMhTKbOyAB7D77m8QsiaZQhBCINyujYsPV6DvPI2zDEayhJNXxVh4XpM1D5BQ==" length="3996521" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.45.zip" sparkle:edSignature="CjMVjdyRamvhddwGQtBqq3+f4KAnjHf+VAx/QekAq03d6yb9ro95X/4vPUild2Qe5PTzZ8WXfYxuncJ809rcAw==" length="3996470" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

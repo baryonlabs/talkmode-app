@@ -35,6 +35,20 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.45 — 2026-06-02
+
+### Release infrastructure
+- `scripts/release.sh` auto-sources `.env` (gitignored) at startup so
+  `wrangler pages deploy` and `notarytool` get `CLOUDFLARE_ACCOUNT_ID`
+  etc. without per-shell exports. `.env.example` documents the shape.
+- `docs/FUTURE_WORK.md` adds the recordings viewer
+  ([talkmode-app#3](https://github.com/baryonlabs/talkmode-app/issues/3))
+  to the backlog with a concrete scope.
+
+### No user-facing behavior change vs 0.4.44
+All voice / VAD / mini-mode / locale fixes from 0.4.44 are unchanged.
+This release exists to verify the auto-source path on a real deploy.
+
 ## 0.4.44 — 2026-06-02
 
 ### Added

@@ -5,17 +5,21 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.43</title>
-      <pubDate>Tue, 02 Jun 2026 12:32:58 +0900</pubDate>
-      <sparkle:version>47</sparkle:version>
-      <sparkle:shortVersionString>0.4.43</sparkle:shortVersionString>
+      <title>0.4.44</title>
+      <pubDate>Tue, 02 Jun 2026 20:33:01 +0900</pubDate>
+      <sparkle:version>48</sparkle:version>
+      <sparkle:shortVersionString>0.4.44</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>중국어 / 일본어 / 스페인어 등 비-한국어 TTS 가 1초 만에 끊기던 회귀 fix.</b> SystemSpeechPlayer 가 사용자가 Settings 에서 고른 selectedVoiceID (대개 한국어 voice) 를 발화 locale 과 무관하게 강제로 사용 → AVSpeechSynthesizer 가 발음 불가로 즉시 didFinish → 약 1초 만에 종료. 통역 모드 (ko → zh 등) 와 다국어 대화에서 가장 자주 보였음. 0.4.43 부터는 picked voice 의 base language(ko / zh / ja / en …) 와 target locale 의 base language 가 일치할 때만 사용, 다르면 bestVoice(for:gender:) 로 자동 fallback. region (zh-CN vs zh-TW) 은 의도적으로 strict 하지 않음.</li>
+          <li><b>Silero VAD (Core ML, on-device).</b> 새 Settings → "VAD engine" picker. Default 는 Energy (RMS+hysteresis) 그대로, 사용자가 Silero 로 전환하면 Apple Neural Engine 가속 ONNX 변환본이 동작. 번들 약 900KB, warmup ~11ms 후 매 36ms window 당 inference <100μs — VAD window 보다 한 자릿수 짧음. 카페·회의실 ambient noise 에서 EnergyVAD 보다 월등히 안정적이라, 다음 릴리스에 barge-in default ON 복귀의 토대.</li>
+          <li><b>미니 모드.</b> 200×200 floating window — 아바타 얼굴 + phase dot 만, 다른 창 위에 떠 있고 마우스 드래그로 자유 이동. 음성 대화는 background 의 같은 ConversationEngine 에서 끊김 없이 진행. 헤더의 arrow.down.right.and.arrow.up.left 버튼 또는 Settings → 동작 → "미니 모드" 토글.</li>
+          <li><b>비-한국어 TTS 1초 종료 회귀 fix (0.4.43 누적).</b> 한국어 voice 가 중국어/일본어/스페인어 발화 시 즉시 didFinish 로 끊기던 회귀 — base-language 매칭 후 mismatch 면 bestVoice 자동 fallback. region (zh-CN vs zh-TW) 은 의도적으로 strict 하지 않음.</li>
+          <li><b>발화 중 시선 이탈 → 즉시 thinking.</b> AdaptiveTurnDetector.fireFastNow 의 mic-active reject 가 gaze 핸드오프 trigger 일 때는 우회. "I'm finishing — I look away" 자연 패턴이 다시 동작.</li>
+          <li>73 unit tests pass (이전 50 → +23). 신규 suite: VoiceLocaleMatchTests, SileroVADDownloaderTests, VADEnginePickerTests, MiniModeSettingsTests + gaze fast-fire 2개.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.43.zip" sparkle:edSignature="LHCqbya07lRwFawwmwPl9wJUJDcUV0xHjdBC0rsHV8F4kuHjRWJ4Fl9du5tj0Y0jrSBQVBs4ZJE5WTNftHsNAg==" length="3170998" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.44.zip" sparkle:edSignature="2Q6ieeIXy7xM755l37Z1f9nXgcMhTKbOyAB7D77m8QsiaZQhBCINyujYsPV6DvPI2zDEayhJNXxVh4XpM1D5BQ==" length="3996521" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

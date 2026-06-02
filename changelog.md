@@ -35,6 +35,41 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.44 — 2026-06-02
+
+### Added
+- **Silero VAD (Core ML, on-device).** New Settings → "VAD engine"
+  picker. Default Energy (RMS+hysteresis); flip to Silero for an
+  ANE-accelerated ONNX conversion (FluidInference/silero-vad-coreml
+  v6.0.0, MIT). Bundled `.mlmodelc` is ~900KB. Warmup ~11ms, then
+  <100μs per 36ms window — invisible latency. Far more resistant to
+  café / meeting-room ambient noise; sets up re-enabling barge-in
+  by default in a future release.
+- **Mini mode.** 200×200 floating window — just the avatar face +
+  phase dot. Drag anywhere, stays above other windows. Voice
+  conversation keeps running in the background through the same
+  `ConversationEngine`. Toggle from the header
+  `arrow.down.right.and.arrow.up.left` button or
+  Settings → Behavior → "Mini mode".
+
+### Fixed
+- **Look-away mid-sentence now ends the turn.**
+  `AdaptiveTurnDetector.fireFastNow` bypasses the mic-active reject
+  when the trigger is the gaze hand-off. Natural "I'm finishing — I
+  look away" pattern works again.
+
+### Tests
+- 73 passing (up from 50). New suites:
+  - `VoiceLocaleMatchTests` (11) — voice/locale base-language match
+  - `SileroVADDownloaderTests` (7) — SHA256 + URL pinning + sandbox
+  - `VADEnginePickerTests` (3) — UserDefaults round-trip
+  - `MiniModeSettingsTests` (3)
+  - +2 new gaze fast-fire scenarios.
+
+### Acknowledgements
+- Silero VAD by Silero Team (MIT) via FluidInference/silero-vad-coreml
+  conversion. Full text in `Resources/SileroVAD/ATTRIBUTION.md`.
+
 ## 0.4.43 — 2026-06-02
 
 ### Fixed

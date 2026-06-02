@@ -35,6 +35,36 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.46 — 2026-06-02
+
+### AEC quality
+- Explicit `voiceProcessingOtherAudioDuckingConfiguration` with
+  `enableAdvancedDucking = true` + `duckingLevel = .max`. TTS playback
+  ducks ambient mic input more aggressively so self-echo attenuates
+  before reaching STT.
+- `isVoiceProcessingAGCEnabled = true` made explicit.
+- New OSLog channel `subsystem=app.talkmode category=audio.vp` logs
+  active VP options + pre/post-VP format on each session start.
+  Silent-STT regressions are now diagnosable from `log show`.
+
+### Barge-in echo discrimination
+- `BargeInDetector` keeps a 1 s sliding-window baseline of mic energy
+  while armed (during TTS speaking).
+- `.speechStarted` is now gated by the 150 ms onset peak: if
+  `peak < baseline × 2.0` the trigger is rejected as self-echo.
+- Baseline freezes on `disarm()` so it carries over between turns —
+  listening-phase mic activity can't contaminate the gate.
+- `echoRejectMultiplier = 2.0` exposed as a tunable `var`.
+
+### Tests
+- `AECDuckingConfigTests` (4 cases).
+- `BargeInEchoDiscriminationTests` (4 cases).
+- Total: 98 passing.
+
+### Defaults
+- AEC and barge-in stay default-OFF in 0.4.46. The new heuristics
+  need field validation before a default flip in a future release.
+
 ## 0.4.45 — 2026-06-02
 
 ### Release infrastructure

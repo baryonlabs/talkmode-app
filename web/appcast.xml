@@ -5,18 +5,20 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.45</title>
-      <pubDate>Tue, 02 Jun 2026 21:17:10 +0900</pubDate>
-      <sparkle:version>49</sparkle:version>
-      <sparkle:shortVersionString>0.4.45</sparkle:shortVersionString>
+      <title>0.4.46</title>
+      <pubDate>Tue, 02 Jun 2026 22:42:35 +0900</pubDate>
+      <sparkle:version>50</sparkle:version>
+      <sparkle:shortVersionString>0.4.46</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>릴리스 인프라 정리.</b> scripts/release.sh 가 .env (gitignored) 를 시작 시 auto-source — wrangler pages deploy 와 notarytool 이 CLOUDFLARE_ACCOUNT_ID 등 필요한 env 를 자동으로 가져감. .env.example 에 형식 + 코멘트.</li>
-          <li>사용자 facing 동작은 0.4.44 와 동일 — Silero VAD / 미니 모드 / voice·locale / gaze fix 그대로. 이 release 는 자동 source 경로를 실 deploy 로 검증하고 main 과 release artifact 의 sync 를 맞추기 위함.</li>
+          <li><b>실험적 기능 2개 quality 향상.</b> AEC (Apple Voice Processing IO) + 말로 끼어들기. 둘 다 default OFF 유지 — 플립해서 시험 후 다음 release 에서 default 변경 검토.</li>
+          <li><b>AEC.</b> voiceProcessingOtherAudioDuckingConfiguration 의 advancedDucking + max ducking + AGC 명시. TTS playback 중 ambient mic ducking 강화 → self-echo 가 STT 에 도달 전 감쇄. 새 OSLog 채널 audio.vp 가 launch 시점 옵션과 format 을 log 해 silent-STT 회귀를 진단 가능.</li>
+          <li><b>말로 끼어들기 echo discrimination.</b> BargeInDetector 가 armed 상태에서 mic energy 의 1s sliding baseline 을 유지, .speechStarted 의 150ms onset peak 가 baseline × 2.0 미만이면 echo 로 판단해 reject. 실제 사용자 발화는 그대로 trigger. threshold (echoRejectMultiplier) 는 tunable var.</li>
+          <li>98 unit tests pass — AEC ducking config 4 + barge-in echo discrimination 4 신규.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.45.zip" sparkle:edSignature="CjMVjdyRamvhddwGQtBqq3+f4KAnjHf+VAx/QekAq03d6yb9ro95X/4vPUild2Qe5PTzZ8WXfYxuncJ809rcAw==" length="3996470" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.46.zip" sparkle:edSignature="3xOg8yrzOcLTrrqJo9DfpXpCmQdKzp+7TOI3bAO+xzBQyt11Jbqid3rdSste51XZCtCQto6LB5mIsWu8gMZlBg==" length="4075918" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

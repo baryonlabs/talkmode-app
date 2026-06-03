@@ -35,6 +35,46 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.47 — 2026-06-03
+
+### Fixed
+- **AEC silent regression (0.4.46 rollback).** The 0.4.46
+  `enableAdvancedDucking = true` + `duckingLevel = .max` + forced
+  `isVoiceProcessingAGCEnabled = true` together ducked the user's
+  own voice and AGC-suppressed what remained, leaving the mic
+  completely silent on most setups. Apple defaults restored;
+  standard AEC via `setVoiceProcessingEnabled(true)` is kept.
+- **CLI assistant timeout 60s → 120s.** codex/claude/gemini/
+  cursor-agent/kimi/opencode/baryon all share the timeout. Reasoning
+  models running 30-50s before the first JSONL chunk were getting
+  cut off into the "request failed" path on long prompts.
+- **Developer mode toggle restored.** The 0.4.40 `developerMode` flag
+  was accidentally dropped during the four-parallel-agent integration
+  earlier in the day. Settings → Behavior → "Developer mode" once
+  again gates the Diagnostics tab.
+
+### Added
+- **MCP marketplace (Agent tab).** New "MCP 서버" section: `mcpEnabled`
+  toggle, the `~/.talk_mode_mac/mcp.json` path with Reveal-in-Finder,
+  and a "Browse + install" button. `MCPBrowseSheet` lets you search
+  13 curated servers (brave-search, filesystem, github, slack,
+  postgres, fetch, memory, sequentialthinking, time, sqlite,
+  puppeteer, gdrive, gitlab) and install with one click — the entry
+  is appended to `mcp.json` in Claude Desktop format. If the server
+  declares `requiredEnv` keys, an `MCPEnvSheet` collects them as
+  `SecureField` values before writing.
+- **Camera vision — hosted multimodal.** `CameraStream` gains
+  `captureStillImage()` async. `AssistantClient` gains an optional
+  `streamWithVision(...)` protocol method with a text-only default.
+  `BaryonHostedClient` implements it as OpenAI Chat Completions
+  multimodal with the captured frame attached as a base64 JPEG
+  `data:` URL. `ConversationEngine.describeCameraView` routes hosted
+  clients through the new path while CLI providers keep the existing
+  `@path` attachment convention.
+
+### Tests
+- 140 passing (1 skipped — MCP Node-mock E2E gate, unchanged).
+
 ## 0.4.46 — 2026-06-02
 
 ### AEC quality

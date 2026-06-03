@@ -5,20 +5,22 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.46</title>
-      <pubDate>Tue, 02 Jun 2026 22:42:35 +0900</pubDate>
-      <sparkle:version>50</sparkle:version>
-      <sparkle:shortVersionString>0.4.46</sparkle:shortVersionString>
+      <title>0.4.47</title>
+      <pubDate>Wed, 03 Jun 2026 12:55:02 +0900</pubDate>
+      <sparkle:version>51</sparkle:version>
+      <sparkle:shortVersionString>0.4.47</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>실험적 기능 2개 quality 향상.</b> AEC (Apple Voice Processing IO) + 말로 끼어들기. 둘 다 default OFF 유지 — 플립해서 시험 후 다음 release 에서 default 변경 검토.</li>
-          <li><b>AEC.</b> voiceProcessingOtherAudioDuckingConfiguration 의 advancedDucking + max ducking + AGC 명시. TTS playback 중 ambient mic ducking 강화 → self-echo 가 STT 에 도달 전 감쇄. 새 OSLog 채널 audio.vp 가 launch 시점 옵션과 format 을 log 해 silent-STT 회귀를 진단 가능.</li>
-          <li><b>말로 끼어들기 echo discrimination.</b> BargeInDetector 가 armed 상태에서 mic energy 의 1s sliding baseline 을 유지, .speechStarted 의 150ms onset peak 가 baseline × 2.0 미만이면 echo 로 판단해 reject. 실제 사용자 발화는 그대로 trigger. threshold (echoRejectMultiplier) 는 tunable var.</li>
-          <li>98 unit tests pass — AEC ducking config 4 + barge-in echo discrimination 4 신규.</li>
+          <li><b>AEC silent 회귀 fix (0.4.46 rollback).</b> 0.4.46 의 advancedDucking + max + 강제 AGC 가 사용자 자기 음성도 함께 게이팅 → mic 완전 silent. Apple 기본값으로 복귀. 표준 AEC (setVoiceProcessingEnabled) 는 유지.</li>
+          <li><b>CLI assistant timeout 60s → 120s.</b> codex/claude/gemini/cursor-agent/kimi/opencode/baryon 모두 영향. reasoning 모델이 첫 응답까지 30-50s 걸리던 prompt 가 timeout 으로 끊기던 회귀 해소.</li>
+          <li><b>개발자 모드 토글 복구.</b> 0.4.40 의 developerMode 가 sub-agent 통합 중 실수로 사라졌던 회귀. Settings → Behavior → "개발자 모드" 가 다시 진단 탭을 게이트.</li>
+          <li><b>MCP marketplace (비서 탭).</b> "MCP 서버" 섹션 — mcpEnabled 토글 + mcp.json 경로 + "서버 검색 + 설치" 버튼. 13개 curated server (brave-search/filesystem/github/slack/postgres/fetch/memory/sequentialthinking/time/sqlite/puppeteer/gdrive/gitlab) 검색 → 한 번 클릭 설치 → Claude Desktop 형식으로 mcp.json 에 자동 append. API key 필요 시 SecureField 로 입력.</li>
+          <li><b>카메라 vision — hosted multimodal.</b> CameraStream.captureStillImage() async, AssistantClient.streamWithVision protocol + text-only fallback, BaryonHostedClient 의 OpenAI multipart 구현 (base64 JPEG data URL). ConversationEngine 가 hosted 면 vision API, CLI 면 기존 @path 패턴.</li>
+          <li>140 unit tests pass (1 skipped — MCP Node-mock E2E gate).</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.46.zip" sparkle:edSignature="3xOg8yrzOcLTrrqJo9DfpXpCmQdKzp+7TOI3bAO+xzBQyt11Jbqid3rdSste51XZCtCQto6LB5mIsWu8gMZlBg==" length="4075918" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.47.zip" sparkle:edSignature="IY0N1tMgZXjjut0d6i6cYdYGtZ3pgyUOBCOQ767of3o+tpcPgEV8biO3rsrN2NpafVDHKVqsFbQ1auG6BCutDg==" length="4715009" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

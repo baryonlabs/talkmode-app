@@ -35,6 +35,43 @@ All notable changes to **TalkMode**. Newest release first. Versions follow
   pointing at the English / Korean docs for the newest features
   (Translate, Obsidian sync, local LLM).
 
+## 0.4.48 — 2026-06-03
+
+### Added
+- **File attach in chat.** Drop any `.txt`/`.md`/`.pdf`/`.docx`/
+  `.png`/`.jpg`/`.heic` into the composer (or pick via the paperclip
+  button). PDFKit for PDFs, `/usr/bin/unzip` + small XML strip for
+  DOCX (graceful fallback if unzip is missing), NSImage → JPEG for
+  images. 32 KB text cap (UTF-8 boundary truncation + visible
+  "truncated" chip), 8 MB image cap. Images route through
+  `BaryonHostedClient.streamWithVision`; CLI providers keep the
+  existing `@path` convention.
+- **Internet search — no setup.** New `web.search` skill. LLM routes
+  "search / today's news / find X" through it; skill POSTs to
+  `html.duckduckgo.com/html/`, extracts top-3 results, unwraps the
+  `uddg=` redirect, decodes HTML entities, returns a markdown
+  summary footered with "Powered by DuckDuckGo". Zero API keys.
+  brave-search remains in the MCP marketplace for BYOK users.
+- **Persona memory.** `PersonaStore` pulls bullets from
+  `~/.talk_mode_mac/persona/memory.md` and injects a `<user_memory>`
+  block between the Baryon identity preamble and the persona body —
+  only when at least one fact exists. Pairs with the existing
+  `memory.add` skill so "내 이름은 …" persists across turns.
+
+### Fixed
+- **Mini-mode shrink button restored.** The header
+  `arrow.down.right.and.arrow.up.left` button (and the Settings
+  toggle) had stopped doing anything — `RootWindowView` +
+  `MiniWindowChrome` (the `NSViewRepresentable` that reconfigures
+  the host window into a 200×200 floating panel) had dropped out
+  during one of the multi-agent integrations, the same drift mode
+  that briefly lost `developerMode`. Both wrappers restored.
+
+### Tests
+- 157 passing (1 skipped — MCP Node-mock E2E gate, unchanged).
+  New: `PersonaMemoryInjectionTests` (6), `WebSearchSkillTests` (17),
+  `FileAttachmentTests` (9).
+
 ## 0.4.47 — 2026-06-03
 
 ### Fixed

@@ -5,22 +5,21 @@
     <link>https://talkmode.baryon.ai/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>0.4.47</title>
-      <pubDate>Wed, 03 Jun 2026 12:55:02 +0900</pubDate>
-      <sparkle:version>51</sparkle:version>
-      <sparkle:shortVersionString>0.4.47</sparkle:shortVersionString>
+      <title>0.4.48</title>
+      <pubDate>Wed, 03 Jun 2026 13:40:45 +0900</pubDate>
+      <sparkle:version>52</sparkle:version>
+      <sparkle:shortVersionString>0.4.48</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li><b>AEC silent 회귀 fix (0.4.46 rollback).</b> 0.4.46 의 advancedDucking + max + 강제 AGC 가 사용자 자기 음성도 함께 게이팅 → mic 완전 silent. Apple 기본값으로 복귀. 표준 AEC (setVoiceProcessingEnabled) 는 유지.</li>
-          <li><b>CLI assistant timeout 60s → 120s.</b> codex/claude/gemini/cursor-agent/kimi/opencode/baryon 모두 영향. reasoning 모델이 첫 응답까지 30-50s 걸리던 prompt 가 timeout 으로 끊기던 회귀 해소.</li>
-          <li><b>개발자 모드 토글 복구.</b> 0.4.40 의 developerMode 가 sub-agent 통합 중 실수로 사라졌던 회귀. Settings → Behavior → "개발자 모드" 가 다시 진단 탭을 게이트.</li>
-          <li><b>MCP marketplace (비서 탭).</b> "MCP 서버" 섹션 — mcpEnabled 토글 + mcp.json 경로 + "서버 검색 + 설치" 버튼. 13개 curated server (brave-search/filesystem/github/slack/postgres/fetch/memory/sequentialthinking/time/sqlite/puppeteer/gdrive/gitlab) 검색 → 한 번 클릭 설치 → Claude Desktop 형식으로 mcp.json 에 자동 append. API key 필요 시 SecureField 로 입력.</li>
-          <li><b>카메라 vision — hosted multimodal.</b> CameraStream.captureStillImage() async, AssistantClient.streamWithVision protocol + text-only fallback, BaryonHostedClient 의 OpenAI multipart 구현 (base64 JPEG data URL). ConversationEngine 가 hosted 면 vision API, CLI 면 기존 @path 패턴.</li>
-          <li>140 unit tests pass (1 skipped — MCP Node-mock E2E gate).</li>
+          <li><b>파일 첨부.</b> 채팅 composer 에 .txt/.md/.pdf/.docx/.png/.jpg/.heic 드래그-드롭 또는 paperclip 버튼. PDFKit + /usr/bin/unzip(DOCX) + NSImage→JPEG. 텍스트 32KB / 이미지 8MB cap. 이미지는 BaryonHostedClient.streamWithVision 으로, CLI 는 @path.</li>
+          <li><b>인터넷 검색 (no setup).</b> 새 web.search skill — DuckDuckGo HTML POST (API key 불필요). LLM 이 "검색해줘 / 뉴스 / 오늘 X" 의도 시 자동 호출, top-3 결과를 markdown 으로 요약. brave-search 는 MCP marketplace 에 그대로.</li>
+          <li><b>퍼소나 memory.</b> PersonaStore 가 ~/.talk_mode_mac/persona/memory.md 의 bullet 들을 system prompt 의 &lt;user_memory&gt; 블록에 자동 inject. memory.add 가 한 줄 추가 → 다음 turn 부터 비서가 기억.</li>
+          <li><b>미니 모드 버튼 복구.</b> 헤더의 arrow.down.right.and.arrow.up.left 가 동작 안 하던 회귀 (developerMode 처럼 sub-agent 통합 중 RootWindowView + MiniWindowChrome 가 사라졌었음) — 복구. Settings → 동작 → "미니 모드" 토글도 다시 동작.</li>
+          <li>157 unit tests pass (1 skipped — MCP Node-mock E2E gate). PersonaMemoryInjectionTests 6 + WebSearchSkillTests 17 + FileAttachmentTests 9 신규.</li>
         </ul>
       ]]></description>
-      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.47.zip" sparkle:edSignature="IY0N1tMgZXjjut0d6i6cYdYGtZ3pgyUOBCOQ767of3o+tpcPgEV8biO3rsrN2NpafVDHKVqsFbQ1auG6BCutDg==" length="4715009" type="application/octet-stream" />
+      <enclosure url="https://talkmode.baryon.ai/download/TalkMode-0.4.48.zip" sparkle:edSignature="ZR2QWzqK5OjNUAM0ZHVEwHnVt/5wDsgUDjXTvJU29/Mlwv8r1qlNGbPOaMGEygmp4X3S5oFyyh4IJ6k6hiPuAg==" length="4794496" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
